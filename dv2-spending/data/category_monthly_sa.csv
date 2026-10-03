@@ -1,0 +1,1531 @@
+date,category,spend_m
+2012-07-01,Food,6705.4
+2012-08-01,Food,6762.5
+2012-09-01,Food,6781.0
+2012-10-01,Food,6815.7
+2012-11-01,Food,6800.6
+2012-12-01,Food,6750.9
+2013-01-01,Food,6827.3
+2013-02-01,Food,6846.1
+2013-03-01,Food,6882.3
+2013-04-01,Food,6865.2
+2013-05-01,Food,6917.8
+2013-06-01,Food,6906.7
+2013-07-01,Food,6962.0
+2013-08-01,Food,7027.4
+2013-09-01,Food,6979.4
+2013-10-01,Food,6991.9
+2013-11-01,Food,6995.7
+2013-12-01,Food,7161.9
+2014-01-01,Food,7217.9
+2014-02-01,Food,7165.3
+2014-03-01,Food,7174.2
+2014-04-01,Food,7153.4
+2014-05-01,Food,7146.4
+2014-06-01,Food,7218.6
+2014-07-01,Food,7272.5
+2014-08-01,Food,7274.7
+2014-09-01,Food,7292.7
+2014-10-01,Food,7295.6
+2014-11-01,Food,7300.8
+2014-12-01,Food,7290.4
+2015-01-01,Food,7298.5
+2015-02-01,Food,7333.9
+2015-03-01,Food,7329.2
+2015-04-01,Food,7402.9
+2015-05-01,Food,7432.1
+2015-06-01,Food,7444.0
+2015-07-01,Food,7453.3
+2015-08-01,Food,7453.6
+2015-09-01,Food,7488.3
+2015-10-01,Food,7536.9
+2015-11-01,Food,7587.1
+2015-12-01,Food,7577.9
+2016-01-01,Food,7576.9
+2016-02-01,Food,7572.2
+2016-03-01,Food,7617.8
+2016-04-01,Food,7608.1
+2016-05-01,Food,7606.5
+2016-06-01,Food,7669.7
+2016-07-01,Food,7655.9
+2016-08-01,Food,7761.8
+2016-09-01,Food,7780.7
+2016-10-01,Food,7792.1
+2016-11-01,Food,7818.7
+2016-12-01,Food,7891.9
+2017-01-01,Food,7855.0
+2017-02-01,Food,7901.2
+2017-03-01,Food,7922.2
+2017-04-01,Food,7967.4
+2017-05-01,Food,7966.9
+2017-06-01,Food,7974.7
+2017-07-01,Food,7994.6
+2017-08-01,Food,7958.5
+2017-09-01,Food,8017.1
+2017-10-01,Food,8024.3
+2017-11-01,Food,8035.1
+2017-12-01,Food,8076.9
+2018-01-01,Food,8101.6
+2018-02-01,Food,8092.7
+2018-03-01,Food,8224.3
+2018-04-01,Food,8192.7
+2018-05-01,Food,8213.9
+2018-06-01,Food,8279.8
+2018-07-01,Food,8324.1
+2018-08-01,Food,8371.5
+2018-09-01,Food,8355.6
+2018-10-01,Food,8377.3
+2018-11-01,Food,8354.7
+2018-12-01,Food,8446.2
+2019-01-01,Food,8511.5
+2019-02-01,Food,8719.1
+2019-03-01,Food,8620.7
+2019-04-01,Food,8518.5
+2019-05-01,Food,8460.5
+2019-06-01,Food,8408.0
+2019-07-01,Food,8422.9
+2019-08-01,Food,8468.4
+2019-09-01,Food,8497.4
+2019-10-01,Food,8580.4
+2019-11-01,Food,8639.9
+2019-12-01,Food,8545.9
+2020-01-01,Food,8462.1
+2020-02-01,Food,8520.5
+2020-03-01,Food,10758.2
+2020-04-01,Food,9270.8
+2020-05-01,Food,9648.4
+2020-06-01,Food,9541.6
+2020-07-01,Food,9684.7
+2020-08-01,Food,9577.0
+2020-09-01,Food,9428.9
+2020-10-01,Food,9417.4
+2020-11-01,Food,9373.3
+2020-12-01,Food,9335.2
+2021-01-01,Food,9194.0
+2021-02-01,Food,9027.6
+2021-03-01,Food,8929.0
+2021-04-01,Food,8965.1
+2021-05-01,Food,9144.2
+2021-06-01,Food,9393.5
+2021-07-01,Food,9693.5
+2021-08-01,Food,9890.0
+2021-09-01,Food,9814.2
+2021-10-01,Food,9728.0
+2021-11-01,Food,9515.3
+2021-12-01,Food,9877.9
+2022-01-01,Food,9935.9
+2022-02-01,Food,9804.5
+2022-03-01,Food,9575.5
+2022-04-01,Food,10011.6
+2022-05-01,Food,9916.1
+2022-06-01,Food,9990.6
+2022-07-01,Food,10282.1
+2022-08-01,Food,10316.3
+2022-09-01,Food,10429.0
+2022-10-01,Food,10485.7
+2022-11-01,Food,10582.6
+2022-12-01,Food,10722.7
+2023-01-01,Food,10762.2
+2023-02-01,Food,10877.4
+2023-03-01,Food,10623.3
+2023-04-01,Food,10945.3
+2023-05-01,Food,10960.6
+2023-06-01,Food,10935.1
+2023-07-01,Food,10900.0
+2023-08-01,Food,10850.5
+2023-09-01,Food,11017.0
+2023-10-01,Food,11041.8
+2023-11-01,Food,11056.6
+2023-12-01,Food,11062.2
+2024-01-01,Food,11167.0
+2024-02-01,Food,11137.7
+2024-03-01,Food,11073.9
+2024-04-01,Food,11095.6
+2024-05-01,Food,11148.5
+2024-06-01,Food,11188.9
+2024-07-01,Food,11148.7
+2024-08-01,Food,11320.9
+2024-09-01,Food,11318.8
+2024-10-01,Food,11403.9
+2024-11-01,Food,11477.8
+2024-12-01,Food,11452.8
+2025-01-01,Food,11539.4
+2025-02-01,Food,11646.8
+2025-03-01,Food,11843.1
+2025-04-01,Food,11840.4
+2025-05-01,Food,11830.7
+2025-06-01,Food,11994.4
+2025-07-01,Food,11929.8
+2025-08-01,Food,11950.2
+2025-09-01,Food,12045.5
+2025-10-01,Food,12167.5
+2025-11-01,Food,12226.8
+2025-12-01,Food,12201.9
+2026-01-01,Food,12202.1
+2026-02-01,Food,12336.6
+2026-03-01,Food,12549.6
+2026-04-01,Food,12400.8
+2026-05-01,Food,12541.2
+2026-06-01,Food,12573.3
+2026-07-01,Food,12688.6
+2026-08-01,Food,12653.7
+2012-07-01,Alcohol & tobacco,2566.8
+2012-08-01,Alcohol & tobacco,2578.0
+2012-09-01,Alcohol & tobacco,2581.5
+2012-10-01,Alcohol & tobacco,2581.2
+2012-11-01,Alcohol & tobacco,2591.7
+2012-12-01,Alcohol & tobacco,2590.6
+2013-01-01,Alcohol & tobacco,2606.1
+2013-02-01,Alcohol & tobacco,2609.1
+2013-03-01,Alcohol & tobacco,2623.3
+2013-04-01,Alcohol & tobacco,2640.3
+2013-05-01,Alcohol & tobacco,2641.3
+2013-06-01,Alcohol & tobacco,2678.0
+2013-07-01,Alcohol & tobacco,2704.2
+2013-08-01,Alcohol & tobacco,2707.6
+2013-09-01,Alcohol & tobacco,2695.0
+2013-10-01,Alcohol & tobacco,2684.7
+2013-11-01,Alcohol & tobacco,2682.3
+2013-12-01,Alcohol & tobacco,2717.4
+2014-01-01,Alcohol & tobacco,2804.4
+2014-02-01,Alcohol & tobacco,2798.1
+2014-03-01,Alcohol & tobacco,2789.8
+2014-04-01,Alcohol & tobacco,2815.2
+2014-05-01,Alcohol & tobacco,2818.2
+2014-06-01,Alcohol & tobacco,2831.2
+2014-07-01,Alcohol & tobacco,2831.7
+2014-08-01,Alcohol & tobacco,2831.7
+2014-09-01,Alcohol & tobacco,2839.1
+2014-10-01,Alcohol & tobacco,2868.7
+2014-11-01,Alcohol & tobacco,2839.0
+2014-12-01,Alcohol & tobacco,2841.9
+2015-01-01,Alcohol & tobacco,2844.3
+2015-02-01,Alcohol & tobacco,2862.8
+2015-03-01,Alcohol & tobacco,2877.5
+2015-04-01,Alcohol & tobacco,2857.1
+2015-05-01,Alcohol & tobacco,2892.3
+2015-06-01,Alcohol & tobacco,2915.4
+2015-07-01,Alcohol & tobacco,2945.9
+2015-08-01,Alcohol & tobacco,2954.3
+2015-09-01,Alcohol & tobacco,2953.4
+2015-10-01,Alcohol & tobacco,2962.7
+2015-11-01,Alcohol & tobacco,2931.7
+2015-12-01,Alcohol & tobacco,2943.9
+2016-01-01,Alcohol & tobacco,2961.7
+2016-02-01,Alcohol & tobacco,2935.5
+2016-03-01,Alcohol & tobacco,3001.4
+2016-04-01,Alcohol & tobacco,2981.3
+2016-05-01,Alcohol & tobacco,3017.3
+2016-06-01,Alcohol & tobacco,3024.9
+2016-07-01,Alcohol & tobacco,3021.2
+2016-08-01,Alcohol & tobacco,3033.9
+2016-09-01,Alcohol & tobacco,3047.0
+2016-10-01,Alcohol & tobacco,3055.9
+2016-11-01,Alcohol & tobacco,3087.2
+2016-12-01,Alcohol & tobacco,3079.4
+2017-01-01,Alcohol & tobacco,3122.4
+2017-02-01,Alcohol & tobacco,3138.6
+2017-03-01,Alcohol & tobacco,3143.4
+2017-04-01,Alcohol & tobacco,3151.6
+2017-05-01,Alcohol & tobacco,3174.6
+2017-06-01,Alcohol & tobacco,3180.2
+2017-07-01,Alcohol & tobacco,3212.8
+2017-08-01,Alcohol & tobacco,3217.0
+2017-09-01,Alcohol & tobacco,3256.1
+2017-10-01,Alcohol & tobacco,3300.2
+2017-11-01,Alcohol & tobacco,3347.5
+2017-12-01,Alcohol & tobacco,3359.9
+2018-01-01,Alcohol & tobacco,3386.1
+2018-02-01,Alcohol & tobacco,3409.1
+2018-03-01,Alcohol & tobacco,3443.3
+2018-04-01,Alcohol & tobacco,3454.3
+2018-05-01,Alcohol & tobacco,3488.3
+2018-06-01,Alcohol & tobacco,3474.0
+2018-07-01,Alcohol & tobacco,3514.3
+2018-08-01,Alcohol & tobacco,3523.5
+2018-09-01,Alcohol & tobacco,3516.2
+2018-10-01,Alcohol & tobacco,3591.0
+2018-11-01,Alcohol & tobacco,3595.5
+2018-12-01,Alcohol & tobacco,3597.9
+2019-01-01,Alcohol & tobacco,3536.3
+2019-02-01,Alcohol & tobacco,3558.4
+2019-03-01,Alcohol & tobacco,3582.8
+2019-04-01,Alcohol & tobacco,3574.3
+2019-05-01,Alcohol & tobacco,3545.3
+2019-06-01,Alcohol & tobacco,3576.7
+2019-07-01,Alcohol & tobacco,3557.1
+2019-08-01,Alcohol & tobacco,3589.7
+2019-09-01,Alcohol & tobacco,3566.3
+2019-10-01,Alcohol & tobacco,3536.7
+2019-11-01,Alcohol & tobacco,3645.0
+2019-12-01,Alcohol & tobacco,3667.9
+2020-01-01,Alcohol & tobacco,3505.0
+2020-02-01,Alcohol & tobacco,3530.7
+2020-03-01,Alcohol & tobacco,4056.9
+2020-04-01,Alcohol & tobacco,3745.1
+2020-05-01,Alcohol & tobacco,4094.0
+2020-06-01,Alcohol & tobacco,4098.1
+2020-07-01,Alcohol & tobacco,4168.6
+2020-08-01,Alcohol & tobacco,4193.3
+2020-09-01,Alcohol & tobacco,4037.3
+2020-10-01,Alcohol & tobacco,4123.1
+2020-11-01,Alcohol & tobacco,4010.9
+2020-12-01,Alcohol & tobacco,4034.4
+2021-01-01,Alcohol & tobacco,3894.7
+2021-02-01,Alcohol & tobacco,3851.0
+2021-03-01,Alcohol & tobacco,3829.0
+2021-04-01,Alcohol & tobacco,3782.8
+2021-05-01,Alcohol & tobacco,3859.3
+2021-06-01,Alcohol & tobacco,3886.6
+2021-07-01,Alcohol & tobacco,3914.0
+2021-08-01,Alcohol & tobacco,3931.1
+2021-09-01,Alcohol & tobacco,3995.8
+2021-10-01,Alcohol & tobacco,4026.4
+2021-11-01,Alcohol & tobacco,3955.5
+2021-12-01,Alcohol & tobacco,3939.5
+2022-01-01,Alcohol & tobacco,4040.6
+2022-02-01,Alcohol & tobacco,3993.0
+2022-03-01,Alcohol & tobacco,3932.6
+2022-04-01,Alcohol & tobacco,4046.0
+2022-05-01,Alcohol & tobacco,4010.3
+2022-06-01,Alcohol & tobacco,4000.7
+2022-07-01,Alcohol & tobacco,4049.9
+2022-08-01,Alcohol & tobacco,3999.8
+2022-09-01,Alcohol & tobacco,4002.1
+2022-10-01,Alcohol & tobacco,3952.3
+2022-11-01,Alcohol & tobacco,3904.4
+2022-12-01,Alcohol & tobacco,3852.6
+2023-01-01,Alcohol & tobacco,3919.5
+2023-02-01,Alcohol & tobacco,3916.8
+2023-03-01,Alcohol & tobacco,3833.5
+2023-04-01,Alcohol & tobacco,3869.6
+2023-05-01,Alcohol & tobacco,3797.0
+2023-06-01,Alcohol & tobacco,3807.8
+2023-07-01,Alcohol & tobacco,3773.8
+2023-08-01,Alcohol & tobacco,3769.0
+2023-09-01,Alcohol & tobacco,3815.4
+2023-10-01,Alcohol & tobacco,3701.8
+2023-11-01,Alcohol & tobacco,3669.0
+2023-12-01,Alcohol & tobacco,3593.4
+2024-01-01,Alcohol & tobacco,3623.2
+2024-02-01,Alcohol & tobacco,3582.8
+2024-03-01,Alcohol & tobacco,3592.1
+2024-04-01,Alcohol & tobacco,3482.9
+2024-05-01,Alcohol & tobacco,3487.3
+2024-06-01,Alcohol & tobacco,3470.3
+2024-07-01,Alcohol & tobacco,3440.5
+2024-08-01,Alcohol & tobacco,3466.6
+2024-09-01,Alcohol & tobacco,3365.5
+2024-10-01,Alcohol & tobacco,3323.0
+2024-11-01,Alcohol & tobacco,3362.9
+2024-12-01,Alcohol & tobacco,3309.5
+2025-01-01,Alcohol & tobacco,3250.1
+2025-02-01,Alcohol & tobacco,3203.9
+2025-03-01,Alcohol & tobacco,3212.8
+2025-04-01,Alcohol & tobacco,3043.6
+2025-05-01,Alcohol & tobacco,2962.1
+2025-06-01,Alcohol & tobacco,2876.1
+2025-07-01,Alcohol & tobacco,2828.9
+2025-08-01,Alcohol & tobacco,2803.8
+2025-09-01,Alcohol & tobacco,2792.0
+2025-10-01,Alcohol & tobacco,2823.9
+2025-11-01,Alcohol & tobacco,2792.5
+2025-12-01,Alcohol & tobacco,2865.1
+2026-01-01,Alcohol & tobacco,2825.9
+2026-02-01,Alcohol & tobacco,2812.3
+2026-03-01,Alcohol & tobacco,2812.1
+2026-04-01,Alcohol & tobacco,2823.0
+2026-05-01,Alcohol & tobacco,2849.8
+2026-06-01,Alcohol & tobacco,2875.8
+2026-07-01,Alcohol & tobacco,2908.5
+2026-08-01,Alcohol & tobacco,2880.3
+2012-07-01,Clothing,2550.6
+2012-08-01,Clothing,2555.9
+2012-09-01,Clothing,2522.7
+2012-10-01,Clothing,2503.8
+2012-11-01,Clothing,2509.6
+2012-12-01,Clothing,2531.0
+2013-01-01,Clothing,2526.8
+2013-02-01,Clothing,2595.2
+2013-03-01,Clothing,2513.5
+2013-04-01,Clothing,2542.1
+2013-05-01,Clothing,2600.0
+2013-06-01,Clothing,2600.1
+2013-07-01,Clothing,2582.6
+2013-08-01,Clothing,2663.1
+2013-09-01,Clothing,2703.9
+2013-10-01,Clothing,2710.2
+2013-11-01,Clothing,2735.1
+2013-12-01,Clothing,2681.7
+2014-01-01,Clothing,2677.8
+2014-02-01,Clothing,2687.3
+2014-03-01,Clothing,2667.9
+2014-04-01,Clothing,2669.4
+2014-05-01,Clothing,2639.7
+2014-06-01,Clothing,2625.5
+2014-07-01,Clothing,2655.6
+2014-08-01,Clothing,2626.4
+2014-09-01,Clothing,2668.1
+2014-10-01,Clothing,2664.6
+2014-11-01,Clothing,2650.7
+2014-12-01,Clothing,2696.1
+2015-01-01,Clothing,2702.9
+2015-02-01,Clothing,2691.7
+2015-03-01,Clothing,2795.6
+2015-04-01,Clothing,2740.7
+2015-05-01,Clothing,2753.2
+2015-06-01,Clothing,2698.1
+2015-07-01,Clothing,2805.4
+2015-08-01,Clothing,2792.8
+2015-09-01,Clothing,2808.5
+2015-10-01,Clothing,2818.8
+2015-11-01,Clothing,2821.2
+2015-12-01,Clothing,2859.1
+2016-01-01,Clothing,2882.5
+2016-02-01,Clothing,2912.3
+2016-03-01,Clothing,2913.5
+2016-04-01,Clothing,2936.3
+2016-05-01,Clothing,2883.0
+2016-06-01,Clothing,2932.6
+2016-07-01,Clothing,2927.8
+2016-08-01,Clothing,2932.9
+2016-09-01,Clothing,2942.4
+2016-10-01,Clothing,2918.0
+2016-11-01,Clothing,2932.4
+2016-12-01,Clothing,2995.7
+2017-01-01,Clothing,2972.7
+2017-02-01,Clothing,2920.1
+2017-03-01,Clothing,2934.1
+2017-04-01,Clothing,2945.6
+2017-05-01,Clothing,2960.8
+2017-06-01,Clothing,2933.9
+2017-07-01,Clothing,2965.2
+2017-08-01,Clothing,2931.5
+2017-09-01,Clothing,2951.5
+2017-10-01,Clothing,2955.6
+2017-11-01,Clothing,2999.6
+2017-12-01,Clothing,3023.6
+2018-01-01,Clothing,3000.3
+2018-02-01,Clothing,3026.1
+2018-03-01,Clothing,3003.2
+2018-04-01,Clothing,2959.5
+2018-05-01,Clothing,3057.3
+2018-06-01,Clothing,3066.0
+2018-07-01,Clothing,3033.0
+2018-08-01,Clothing,3056.0
+2018-09-01,Clothing,3011.0
+2018-10-01,Clothing,3114.2
+2018-11-01,Clothing,3146.0
+2018-12-01,Clothing,3118.1
+2019-01-01,Clothing,3172.2
+2019-02-01,Clothing,3128.9
+2019-03-01,Clothing,3182.9
+2019-04-01,Clothing,3124.5
+2019-05-01,Clothing,3150.7
+2019-06-01,Clothing,3168.6
+2019-07-01,Clothing,3106.1
+2019-08-01,Clothing,3127.9
+2019-09-01,Clothing,3115.3
+2019-10-01,Clothing,3106.1
+2019-11-01,Clothing,3016.2
+2019-12-01,Clothing,3246.0
+2020-01-01,Clothing,3117.0
+2020-02-01,Clothing,3001.8
+2020-03-01,Clothing,2478.1
+2020-04-01,Clothing,1756.6
+2020-05-01,Clothing,2944.5
+2020-06-01,Clothing,3175.8
+2020-07-01,Clothing,3365.8
+2020-08-01,Clothing,2935.6
+2020-09-01,Clothing,2894.0
+2020-10-01,Clothing,3024.2
+2020-11-01,Clothing,3399.8
+2020-12-01,Clothing,3370.1
+2021-01-01,Clothing,3312.8
+2021-02-01,Clothing,3282.8
+2021-03-01,Clothing,3455.4
+2021-04-01,Clothing,3415.5
+2021-05-01,Clothing,3391.9
+2021-06-01,Clothing,3186.4
+2021-07-01,Clothing,2847.4
+2021-08-01,Clothing,2628.0
+2021-09-01,Clothing,2729.7
+2021-10-01,Clothing,3215.5
+2021-11-01,Clothing,3775.5
+2021-12-01,Clothing,3654.3
+2022-01-01,Clothing,3533.1
+2022-02-01,Clothing,3783.3
+2022-03-01,Clothing,3806.6
+2022-04-01,Clothing,4006.5
+2022-05-01,Clothing,3977.3
+2022-06-01,Clothing,4064.5
+2022-07-01,Clothing,4246.9
+2022-08-01,Clothing,4116.3
+2022-09-01,Clothing,4185.1
+2022-10-01,Clothing,4156.5
+2022-11-01,Clothing,4179.3
+2022-12-01,Clothing,4136.3
+2023-01-01,Clothing,4214.6
+2023-02-01,Clothing,4177.8
+2023-03-01,Clothing,4145.3
+2023-04-01,Clothing,4222.4
+2023-05-01,Clothing,4226.6
+2023-06-01,Clothing,4119.9
+2023-07-01,Clothing,4120.0
+2023-08-01,Clothing,4081.8
+2023-09-01,Clothing,4169.6
+2023-10-01,Clothing,4091.5
+2023-11-01,Clothing,4170.0
+2023-12-01,Clothing,4085.2
+2024-01-01,Clothing,4195.8
+2024-02-01,Clothing,4148.3
+2024-03-01,Clothing,4082.5
+2024-04-01,Clothing,4125.3
+2024-05-01,Clothing,4105.9
+2024-06-01,Clothing,4131.8
+2024-07-01,Clothing,4074.7
+2024-08-01,Clothing,4195.8
+2024-09-01,Clothing,4086.8
+2024-10-01,Clothing,4158.0
+2024-11-01,Clothing,4221.4
+2024-12-01,Clothing,4270.8
+2025-01-01,Clothing,4215.5
+2025-02-01,Clothing,4223.8
+2025-03-01,Clothing,4216.5
+2025-04-01,Clothing,4091.8
+2025-05-01,Clothing,4241.7
+2025-06-01,Clothing,4328.2
+2025-07-01,Clothing,4262.8
+2025-08-01,Clothing,4294.2
+2025-09-01,Clothing,4264.2
+2025-10-01,Clothing,4437.9
+2025-11-01,Clothing,4523.6
+2025-12-01,Clothing,4418.1
+2026-01-01,Clothing,4424.5
+2026-02-01,Clothing,4433.7
+2026-03-01,Clothing,4482.9
+2026-04-01,Clothing,4387.1
+2026-05-01,Clothing,4503.5
+2026-06-01,Clothing,4475.9
+2026-07-01,Clothing,4544.6
+2026-08-01,Clothing,4500.5
+2012-07-01,Furnishings,3224.2
+2012-08-01,Furnishings,3235.6
+2012-09-01,Furnishings,3231.8
+2012-10-01,Furnishings,3155.2
+2012-11-01,Furnishings,3147.3
+2012-12-01,Furnishings,3221.7
+2013-01-01,Furnishings,3212.1
+2013-02-01,Furnishings,3213.7
+2013-03-01,Furnishings,3221.8
+2013-04-01,Furnishings,3231.7
+2013-05-01,Furnishings,3265.4
+2013-06-01,Furnishings,3240.9
+2013-07-01,Furnishings,3278.3
+2013-08-01,Furnishings,3314.5
+2013-09-01,Furnishings,3265.7
+2013-10-01,Furnishings,3274.1
+2013-11-01,Furnishings,3299.0
+2013-12-01,Furnishings,3354.2
+2014-01-01,Furnishings,3357.7
+2014-02-01,Furnishings,3368.1
+2014-03-01,Furnishings,3381.1
+2014-04-01,Furnishings,3399.1
+2014-05-01,Furnishings,3399.1
+2014-06-01,Furnishings,3391.4
+2014-07-01,Furnishings,3440.8
+2014-08-01,Furnishings,3417.4
+2014-09-01,Furnishings,3453.7
+2014-10-01,Furnishings,3509.3
+2014-11-01,Furnishings,3507.8
+2014-12-01,Furnishings,3509.2
+2015-01-01,Furnishings,3526.3
+2015-02-01,Furnishings,3556.8
+2015-03-01,Furnishings,3591.8
+2015-04-01,Furnishings,3574.8
+2015-05-01,Furnishings,3618.2
+2015-06-01,Furnishings,3649.4
+2015-07-01,Furnishings,3677.8
+2015-08-01,Furnishings,3669.0
+2015-09-01,Furnishings,3670.1
+2015-10-01,Furnishings,3703.0
+2015-11-01,Furnishings,3678.5
+2015-12-01,Furnishings,3718.5
+2016-01-01,Furnishings,3754.0
+2016-02-01,Furnishings,3785.8
+2016-03-01,Furnishings,3762.5
+2016-04-01,Furnishings,3802.1
+2016-05-01,Furnishings,3762.7
+2016-06-01,Furnishings,3785.2
+2016-07-01,Furnishings,3769.8
+2016-08-01,Furnishings,3766.6
+2016-09-01,Furnishings,3834.0
+2016-10-01,Furnishings,3864.2
+2016-11-01,Furnishings,3845.9
+2016-12-01,Furnishings,3789.8
+2017-01-01,Furnishings,3813.2
+2017-02-01,Furnishings,3797.1
+2017-03-01,Furnishings,3797.5
+2017-04-01,Furnishings,3818.9
+2017-05-01,Furnishings,3882.3
+2017-06-01,Furnishings,3927.6
+2017-07-01,Furnishings,3855.6
+2017-08-01,Furnishings,3788.9
+2017-09-01,Furnishings,3750.5
+2017-10-01,Furnishings,3773.2
+2017-11-01,Furnishings,3866.9
+2017-12-01,Furnishings,3830.6
+2018-01-01,Furnishings,3825.3
+2018-02-01,Furnishings,3889.5
+2018-03-01,Furnishings,3916.4
+2018-04-01,Furnishings,3924.8
+2018-05-01,Furnishings,3989.3
+2018-06-01,Furnishings,3997.1
+2018-07-01,Furnishings,3952.2
+2018-08-01,Furnishings,3959.1
+2018-09-01,Furnishings,3904.4
+2018-10-01,Furnishings,3973.7
+2018-11-01,Furnishings,4020.4
+2018-12-01,Furnishings,3926.8
+2019-01-01,Furnishings,3919.9
+2019-02-01,Furnishings,3893.9
+2019-03-01,Furnishings,3863.4
+2019-04-01,Furnishings,3809.4
+2019-05-01,Furnishings,3784.0
+2019-06-01,Furnishings,3803.2
+2019-07-01,Furnishings,3813.9
+2019-08-01,Furnishings,3848.8
+2019-09-01,Furnishings,3861.2
+2019-10-01,Furnishings,3881.8
+2019-11-01,Furnishings,3735.8
+2019-12-01,Furnishings,3983.3
+2020-01-01,Furnishings,3904.1
+2020-02-01,Furnishings,3901.7
+2020-03-01,Furnishings,4196.9
+2020-04-01,Furnishings,4329.8
+2020-05-01,Furnishings,5027.5
+2020-06-01,Furnishings,4798.9
+2020-07-01,Furnishings,5002.6
+2020-08-01,Furnishings,4653.4
+2020-09-01,Furnishings,4509.1
+2020-10-01,Furnishings,4478.5
+2020-11-01,Furnishings,4678.3
+2020-12-01,Furnishings,4652.3
+2021-01-01,Furnishings,4627.1
+2021-02-01,Furnishings,4549.3
+2021-03-01,Furnishings,4573.1
+2021-04-01,Furnishings,4549.9
+2021-05-01,Furnishings,4543.3
+2021-06-01,Furnishings,4544.5
+2021-07-01,Furnishings,4438.0
+2021-08-01,Furnishings,4421.7
+2021-09-01,Furnishings,4568.0
+2021-10-01,Furnishings,4848.6
+2021-11-01,Furnishings,4947.3
+2021-12-01,Furnishings,4930.0
+2022-01-01,Furnishings,4953.7
+2022-02-01,Furnishings,5035.6
+2022-03-01,Furnishings,5066.2
+2022-04-01,Furnishings,5074.6
+2022-05-01,Furnishings,5026.8
+2022-06-01,Furnishings,5039.4
+2022-07-01,Furnishings,5114.6
+2022-08-01,Furnishings,5120.9
+2022-09-01,Furnishings,5110.1
+2022-10-01,Furnishings,5103.4
+2022-11-01,Furnishings,5061.7
+2022-12-01,Furnishings,5062.9
+2023-01-01,Furnishings,5089.6
+2023-02-01,Furnishings,5056.2
+2023-03-01,Furnishings,4998.4
+2023-04-01,Furnishings,5012.8
+2023-05-01,Furnishings,4991.3
+2023-06-01,Furnishings,4936.7
+2023-07-01,Furnishings,4916.2
+2023-08-01,Furnishings,4937.5
+2023-09-01,Furnishings,5030.0
+2023-10-01,Furnishings,4926.1
+2023-11-01,Furnishings,5010.5
+2023-12-01,Furnishings,4919.2
+2024-01-01,Furnishings,5023.9
+2024-02-01,Furnishings,5019.1
+2024-03-01,Furnishings,4984.1
+2024-04-01,Furnishings,5034.1
+2024-05-01,Furnishings,5035.1
+2024-06-01,Furnishings,5091.9
+2024-07-01,Furnishings,4996.9
+2024-08-01,Furnishings,5104.6
+2024-09-01,Furnishings,5102.4
+2024-10-01,Furnishings,5128.4
+2024-11-01,Furnishings,5167.1
+2024-12-01,Furnishings,5244.8
+2025-01-01,Furnishings,5177.6
+2025-02-01,Furnishings,5212.1
+2025-03-01,Furnishings,5215.0
+2025-04-01,Furnishings,5183.7
+2025-05-01,Furnishings,5245.0
+2025-06-01,Furnishings,5356.9
+2025-07-01,Furnishings,5288.3
+2025-08-01,Furnishings,5288.1
+2025-09-01,Furnishings,5304.4
+2025-10-01,Furnishings,5451.7
+2025-11-01,Furnishings,5587.5
+2025-12-01,Furnishings,5464.0
+2026-01-01,Furnishings,5433.2
+2026-02-01,Furnishings,5412.9
+2026-03-01,Furnishings,5500.4
+2026-04-01,Furnishings,5498.4
+2026-05-01,Furnishings,5538.3
+2026-06-01,Furnishings,5566.5
+2026-07-01,Furnishings,5583.2
+2026-08-01,Furnishings,5549.9
+2012-07-01,Health,4162.1
+2012-08-01,Health,4210.1
+2012-09-01,Health,4262.9
+2012-10-01,Health,4319.5
+2012-11-01,Health,4371.1
+2012-12-01,Health,4400.1
+2013-01-01,Health,4399.0
+2013-02-01,Health,4429.7
+2013-03-01,Health,4468.6
+2013-04-01,Health,4441.7
+2013-05-01,Health,4505.5
+2013-06-01,Health,4492.8
+2013-07-01,Health,4465.6
+2013-08-01,Health,4469.1
+2013-09-01,Health,4487.0
+2013-10-01,Health,4492.6
+2013-11-01,Health,4535.2
+2013-12-01,Health,4586.7
+2014-01-01,Health,4634.4
+2014-02-01,Health,4691.7
+2014-03-01,Health,4624.4
+2014-04-01,Health,4642.1
+2014-05-01,Health,4609.2
+2014-06-01,Health,4616.8
+2014-07-01,Health,4678.0
+2014-08-01,Health,4743.3
+2014-09-01,Health,4773.8
+2014-10-01,Health,4783.7
+2014-11-01,Health,4785.5
+2014-12-01,Health,4805.1
+2015-01-01,Health,4858.8
+2015-02-01,Health,4880.7
+2015-03-01,Health,4846.2
+2015-04-01,Health,4867.3
+2015-05-01,Health,4926.7
+2015-06-01,Health,4974.5
+2015-07-01,Health,5028.8
+2015-08-01,Health,5091.5
+2015-09-01,Health,5059.9
+2015-10-01,Health,5041.4
+2015-11-01,Health,5001.2
+2015-12-01,Health,4929.0
+2016-01-01,Health,4994.4
+2016-02-01,Health,4860.8
+2016-03-01,Health,5127.5
+2016-04-01,Health,5200.5
+2016-05-01,Health,5323.7
+2016-06-01,Health,5282.3
+2016-07-01,Health,5277.7
+2016-08-01,Health,5236.9
+2016-09-01,Health,5249.2
+2016-10-01,Health,5315.0
+2016-11-01,Health,5352.1
+2016-12-01,Health,5379.3
+2017-01-01,Health,5425.1
+2017-02-01,Health,5418.7
+2017-03-01,Health,5420.9
+2017-04-01,Health,5502.1
+2017-05-01,Health,5439.9
+2017-06-01,Health,5435.8
+2017-07-01,Health,5483.1
+2017-08-01,Health,5480.1
+2017-09-01,Health,5560.2
+2017-10-01,Health,5595.0
+2017-11-01,Health,5631.5
+2017-12-01,Health,5677.9
+2018-01-01,Health,5616.8
+2018-02-01,Health,5650.1
+2018-03-01,Health,5769.5
+2018-04-01,Health,5810.1
+2018-05-01,Health,5829.8
+2018-06-01,Health,5916.3
+2018-07-01,Health,5853.8
+2018-08-01,Health,5869.1
+2018-09-01,Health,5933.6
+2018-10-01,Health,5959.9
+2018-11-01,Health,6076.2
+2018-12-01,Health,6152.4
+2019-01-01,Health,6047.6
+2019-02-01,Health,6053.7
+2019-03-01,Health,5913.2
+2019-04-01,Health,5954.1
+2019-05-01,Health,6067.6
+2019-06-01,Health,5954.0
+2019-07-01,Health,6096.2
+2019-08-01,Health,6145.7
+2019-09-01,Health,6105.6
+2019-10-01,Health,6170.5
+2019-11-01,Health,6053.6
+2019-12-01,Health,6081.7
+2020-01-01,Health,6302.4
+2020-02-01,Health,6155.1
+2020-03-01,Health,6145.7
+2020-04-01,Health,3920.4
+2020-05-01,Health,4916.3
+2020-06-01,Health,5991.2
+2020-07-01,Health,6526.5
+2020-08-01,Health,6009.1
+2020-09-01,Health,6242.3
+2020-10-01,Health,6388.6
+2020-11-01,Health,6424.6
+2020-12-01,Health,6504.3
+2021-01-01,Health,6559.1
+2021-02-01,Health,6455.9
+2021-03-01,Health,6634.0
+2021-04-01,Health,6568.3
+2021-05-01,Health,6463.5
+2021-06-01,Health,6515.0
+2021-07-01,Health,6351.0
+2021-08-01,Health,6165.8
+2021-09-01,Health,6379.3
+2021-10-01,Health,6540.6
+2021-11-01,Health,6782.3
+2021-12-01,Health,6866.7
+2022-01-01,Health,6633.0
+2022-02-01,Health,6802.0
+2022-03-01,Health,6983.9
+2022-04-01,Health,6899.6
+2022-05-01,Health,7065.6
+2022-06-01,Health,7191.6
+2022-07-01,Health,7157.0
+2022-08-01,Health,7284.3
+2022-09-01,Health,7246.7
+2022-10-01,Health,7433.7
+2022-11-01,Health,7497.9
+2022-12-01,Health,7432.8
+2023-01-01,Health,7444.3
+2023-02-01,Health,7585.4
+2023-03-01,Health,7642.7
+2023-04-01,Health,7603.4
+2023-05-01,Health,7792.2
+2023-06-01,Health,7817.5
+2023-07-01,Health,7812.1
+2023-08-01,Health,7949.1
+2023-09-01,Health,7944.9
+2023-10-01,Health,8059.8
+2023-11-01,Health,8061.1
+2023-12-01,Health,8193.1
+2024-01-01,Health,8175.5
+2024-02-01,Health,8178.1
+2024-03-01,Health,8172.3
+2024-04-01,Health,8372.4
+2024-05-01,Health,8363.5
+2024-06-01,Health,8386.8
+2024-07-01,Health,8453.7
+2024-08-01,Health,8484.9
+2024-09-01,Health,8539.6
+2024-10-01,Health,8623.3
+2024-11-01,Health,8688.9
+2024-12-01,Health,8671.1
+2025-01-01,Health,8880.9
+2025-02-01,Health,8860.2
+2025-03-01,Health,8802.4
+2025-04-01,Health,8926.0
+2025-05-01,Health,9021.8
+2025-06-01,Health,9012.5
+2025-07-01,Health,9143.8
+2025-08-01,Health,9188.2
+2025-09-01,Health,9232.7
+2025-10-01,Health,9261.0
+2025-11-01,Health,9284.8
+2025-12-01,Health,9198.8
+2026-01-01,Health,9353.2
+2026-02-01,Health,9353.2
+2026-03-01,Health,9386.0
+2026-04-01,Health,9424.9
+2026-05-01,Health,9436.0
+2026-06-01,Health,9479.9
+2026-07-01,Health,9598.0
+2026-08-01,Health,9513.4
+2012-07-01,Transport,8076.6
+2012-08-01,Transport,8209.0
+2012-09-01,Transport,8127.5
+2012-10-01,Transport,8285.9
+2012-11-01,Transport,8134.9
+2012-12-01,Transport,8136.7
+2013-01-01,Transport,8405.6
+2013-02-01,Transport,8404.4
+2013-03-01,Transport,8306.8
+2013-04-01,Transport,8432.4
+2013-05-01,Transport,8343.6
+2013-06-01,Transport,8283.6
+2013-07-01,Transport,8606.1
+2013-08-01,Transport,8381.2
+2013-09-01,Transport,8449.3
+2013-10-01,Transport,8232.7
+2013-11-01,Transport,8531.8
+2013-12-01,Transport,8720.7
+2014-01-01,Transport,8459.2
+2014-02-01,Transport,8301.0
+2014-03-01,Transport,8583.1
+2014-04-01,Transport,8363.3
+2014-05-01,Transport,8502.9
+2014-06-01,Transport,8397.8
+2014-07-01,Transport,8490.4
+2014-08-01,Transport,8325.7
+2014-09-01,Transport,8312.1
+2014-10-01,Transport,8486.0
+2014-11-01,Transport,8286.0
+2014-12-01,Transport,8019.7
+2015-01-01,Transport,8113.9
+2015-02-01,Transport,8309.0
+2015-03-01,Transport,8444.3
+2015-04-01,Transport,8538.6
+2015-05-01,Transport,8440.4
+2015-06-01,Transport,8592.2
+2015-07-01,Transport,8635.6
+2015-08-01,Transport,8581.3
+2015-09-01,Transport,8615.4
+2015-10-01,Transport,8522.5
+2015-11-01,Transport,8509.7
+2015-12-01,Transport,8414.5
+2016-01-01,Transport,8352.0
+2016-02-01,Transport,8352.6
+2016-03-01,Transport,8241.1
+2016-04-01,Transport,8533.1
+2016-05-01,Transport,8518.2
+2016-06-01,Transport,8500.9
+2016-07-01,Transport,8289.1
+2016-08-01,Transport,8537.7
+2016-09-01,Transport,8478.5
+2016-10-01,Transport,8481.7
+2016-11-01,Transport,8622.9
+2016-12-01,Transport,8855.2
+2017-01-01,Transport,8676.5
+2017-02-01,Transport,8786.9
+2017-03-01,Transport,8751.9
+2017-04-01,Transport,8628.2
+2017-05-01,Transport,8854.9
+2017-06-01,Transport,8896.9
+2017-07-01,Transport,8806.1
+2017-08-01,Transport,8796.1
+2017-09-01,Transport,8783.5
+2017-10-01,Transport,8883.6
+2017-11-01,Transport,8980.3
+2017-12-01,Transport,9110.2
+2018-01-01,Transport,8988.7
+2018-02-01,Transport,9309.3
+2018-03-01,Transport,8939.3
+2018-04-01,Transport,9273.6
+2018-05-01,Transport,9218.4
+2018-06-01,Transport,9498.5
+2018-07-01,Transport,9264.4
+2018-08-01,Transport,9283.9
+2018-09-01,Transport,9563.5
+2018-10-01,Transport,9514.4
+2018-11-01,Transport,9369.4
+2018-12-01,Transport,9192.4
+2019-01-01,Transport,9330.0
+2019-02-01,Transport,9195.4
+2019-03-01,Transport,9335.7
+2019-04-01,Transport,9109.1
+2019-05-01,Transport,9274.7
+2019-06-01,Transport,9351.0
+2019-07-01,Transport,9282.0
+2019-08-01,Transport,9308.3
+2019-09-01,Transport,9185.1
+2019-10-01,Transport,9344.6
+2019-11-01,Transport,9229.0
+2019-12-01,Transport,9259.0
+2020-01-01,Transport,9535.5
+2020-02-01,Transport,8970.6
+2020-03-01,Transport,6759.4
+2020-04-01,Transport,4227.0
+2020-05-01,Transport,5290.1
+2020-06-01,Transport,6334.4
+2020-07-01,Transport,6329.7
+2020-08-01,Transport,5576.1
+2020-09-01,Transport,5754.2
+2020-10-01,Transport,6222.8
+2020-11-01,Transport,6927.8
+2020-12-01,Transport,7197.9
+2021-01-01,Transport,6914.7
+2021-02-01,Transport,6773.4
+2021-03-01,Transport,7232.2
+2021-04-01,Transport,7747.4
+2021-05-01,Transport,7628.9
+2021-06-01,Transport,6979.7
+2021-07-01,Transport,6649.8
+2021-08-01,Transport,6067.0
+2021-09-01,Transport,6346.0
+2021-10-01,Transport,6995.4
+2021-11-01,Transport,7664.0
+2021-12-01,Transport,7880.9
+2022-01-01,Transport,7896.3
+2022-02-01,Transport,8982.4
+2022-03-01,Transport,9835.7
+2022-04-01,Transport,9971.5
+2022-05-01,Transport,10558.4
+2022-06-01,Transport,10723.5
+2022-07-01,Transport,10974.9
+2022-08-01,Transport,11125.9
+2022-09-01,Transport,11226.8
+2022-10-01,Transport,11419.5
+2022-11-01,Transport,11441.7
+2022-12-01,Transport,11300.4
+2023-01-01,Transport,11730.9
+2023-02-01,Transport,11740.0
+2023-03-01,Transport,11869.1
+2023-04-01,Transport,12076.0
+2023-05-01,Transport,12032.3
+2023-06-01,Transport,12074.0
+2023-07-01,Transport,12379.4
+2023-08-01,Transport,12698.7
+2023-09-01,Transport,13103.5
+2023-10-01,Transport,12780.2
+2023-11-01,Transport,12739.7
+2023-12-01,Transport,12419.6
+2024-01-01,Transport,12671.1
+2024-02-01,Transport,13009.5
+2024-03-01,Transport,12865.5
+2024-04-01,Transport,12963.8
+2024-05-01,Transport,12846.3
+2024-06-01,Transport,12755.8
+2024-07-01,Transport,12817.5
+2024-08-01,Transport,12533.4
+2024-09-01,Transport,12602.3
+2024-10-01,Transport,12838.2
+2024-11-01,Transport,12828.1
+2024-12-01,Transport,12962.5
+2025-01-01,Transport,13068.1
+2025-02-01,Transport,12974.2
+2025-03-01,Transport,12947.7
+2025-04-01,Transport,12863.6
+2025-05-01,Transport,13150.1
+2025-06-01,Transport,13018.5
+2025-07-01,Transport,13106.9
+2025-08-01,Transport,13189.8
+2025-09-01,Transport,13181.1
+2025-10-01,Transport,13235.5
+2025-11-01,Transport,13348.4
+2025-12-01,Transport,13375.4
+2026-01-01,Transport,13395.3
+2026-02-01,Transport,13354.1
+2026-03-01,Transport,14092.9
+2026-04-01,Transport,13490.6
+2026-05-01,Transport,13682.4
+2026-06-01,Transport,14164.4
+2026-07-01,Transport,14229.5
+2026-08-01,Transport,14556.0
+2012-07-01,Recreation,7555.2
+2012-08-01,Recreation,7553.3
+2012-09-01,Recreation,7379.4
+2012-10-01,Recreation,7301.7
+2012-11-01,Recreation,7209.1
+2012-12-01,Recreation,7449.4
+2013-01-01,Recreation,7528.4
+2013-02-01,Recreation,7397.8
+2013-03-01,Recreation,7453.4
+2013-04-01,Recreation,7419.6
+2013-05-01,Recreation,7505.4
+2013-06-01,Recreation,7228.0
+2013-07-01,Recreation,7349.6
+2013-08-01,Recreation,7488.9
+2013-09-01,Recreation,7399.3
+2013-10-01,Recreation,7365.9
+2013-11-01,Recreation,7409.8
+2013-12-01,Recreation,7484.3
+2014-01-01,Recreation,7495.2
+2014-02-01,Recreation,7464.4
+2014-03-01,Recreation,7710.5
+2014-04-01,Recreation,7814.6
+2014-05-01,Recreation,7681.1
+2014-06-01,Recreation,7709.1
+2014-07-01,Recreation,7810.1
+2014-08-01,Recreation,7769.7
+2014-09-01,Recreation,7916.4
+2014-10-01,Recreation,7884.6
+2014-11-01,Recreation,7985.3
+2014-12-01,Recreation,7938.2
+2015-01-01,Recreation,7880.1
+2015-02-01,Recreation,8156.0
+2015-03-01,Recreation,8038.3
+2015-04-01,Recreation,8020.9
+2015-05-01,Recreation,8061.5
+2015-06-01,Recreation,8242.8
+2015-07-01,Recreation,8206.4
+2015-08-01,Recreation,8179.2
+2015-09-01,Recreation,8266.2
+2015-10-01,Recreation,8484.7
+2015-11-01,Recreation,8269.4
+2015-12-01,Recreation,8207.4
+2016-01-01,Recreation,8275.9
+2016-02-01,Recreation,8506.0
+2016-03-01,Recreation,8208.1
+2016-04-01,Recreation,8249.5
+2016-05-01,Recreation,8328.7
+2016-06-01,Recreation,8594.0
+2016-07-01,Recreation,8421.9
+2016-08-01,Recreation,8373.2
+2016-09-01,Recreation,8190.7
+2016-10-01,Recreation,8388.4
+2016-11-01,Recreation,8273.3
+2016-12-01,Recreation,8445.2
+2017-01-01,Recreation,8602.4
+2017-02-01,Recreation,8204.8
+2017-03-01,Recreation,8463.4
+2017-04-01,Recreation,8474.5
+2017-05-01,Recreation,8496.0
+2017-06-01,Recreation,8588.7
+2017-07-01,Recreation,8490.7
+2017-08-01,Recreation,8548.0
+2017-09-01,Recreation,8667.6
+2017-10-01,Recreation,8737.0
+2017-11-01,Recreation,8817.2
+2017-12-01,Recreation,8747.3
+2018-01-01,Recreation,8685.5
+2018-02-01,Recreation,8992.8
+2018-03-01,Recreation,8565.7
+2018-04-01,Recreation,8778.4
+2018-05-01,Recreation,9150.8
+2018-06-01,Recreation,9063.0
+2018-07-01,Recreation,8995.7
+2018-08-01,Recreation,9077.6
+2018-09-01,Recreation,8771.5
+2018-10-01,Recreation,8902.4
+2018-11-01,Recreation,8997.7
+2018-12-01,Recreation,8970.6
+2019-01-01,Recreation,9173.5
+2019-02-01,Recreation,8934.7
+2019-03-01,Recreation,9041.0
+2019-04-01,Recreation,8762.6
+2019-05-01,Recreation,8658.4
+2019-06-01,Recreation,8609.2
+2019-07-01,Recreation,8600.7
+2019-08-01,Recreation,8505.7
+2019-09-01,Recreation,8542.2
+2019-10-01,Recreation,8284.9
+2019-11-01,Recreation,8326.1
+2019-12-01,Recreation,8726.8
+2020-01-01,Recreation,8546.8
+2020-02-01,Recreation,8472.6
+2020-03-01,Recreation,8336.1
+2020-04-01,Recreation,8341.7
+2020-05-01,Recreation,9520.7
+2020-06-01,Recreation,9259.6
+2020-07-01,Recreation,9911.6
+2020-08-01,Recreation,9427.5
+2020-09-01,Recreation,9243.8
+2020-10-01,Recreation,9288.7
+2020-11-01,Recreation,9422.6
+2020-12-01,Recreation,9268.9
+2021-01-01,Recreation,9254.8
+2021-02-01,Recreation,9167.4
+2021-03-01,Recreation,9272.8
+2021-04-01,Recreation,9256.1
+2021-05-01,Recreation,9165.4
+2021-06-01,Recreation,9183.6
+2021-07-01,Recreation,9311.8
+2021-08-01,Recreation,9360.4
+2021-09-01,Recreation,9727.9
+2021-10-01,Recreation,10141.7
+2021-11-01,Recreation,10283.3
+2021-12-01,Recreation,10138.2
+2022-01-01,Recreation,10303.1
+2022-02-01,Recreation,10695.8
+2022-03-01,Recreation,10670.5
+2022-04-01,Recreation,10842.8
+2022-05-01,Recreation,10949.8
+2022-06-01,Recreation,10942.4
+2022-07-01,Recreation,11143.0
+2022-08-01,Recreation,11126.6
+2022-09-01,Recreation,11332.4
+2022-10-01,Recreation,12041.0
+2022-11-01,Recreation,11561.2
+2022-12-01,Recreation,11915.5
+2023-01-01,Recreation,11787.1
+2023-02-01,Recreation,11700.8
+2023-03-01,Recreation,11687.0
+2023-04-01,Recreation,11814.7
+2023-05-01,Recreation,11713.8
+2023-06-01,Recreation,11700.9
+2023-07-01,Recreation,11630.6
+2023-08-01,Recreation,11714.9
+2023-09-01,Recreation,11802.6
+2023-10-01,Recreation,11617.7
+2023-11-01,Recreation,11778.5
+2023-12-01,Recreation,11748.7
+2024-01-01,Recreation,12213.8
+2024-02-01,Recreation,11725.0
+2024-03-01,Recreation,11700.3
+2024-04-01,Recreation,11800.1
+2024-05-01,Recreation,11950.8
+2024-06-01,Recreation,11806.4
+2024-07-01,Recreation,11671.2
+2024-08-01,Recreation,11958.9
+2024-09-01,Recreation,11865.2
+2024-10-01,Recreation,12024.8
+2024-11-01,Recreation,12169.3
+2024-12-01,Recreation,12177.2
+2025-01-01,Recreation,12295.1
+2025-02-01,Recreation,12408.9
+2025-03-01,Recreation,12454.8
+2025-04-01,Recreation,12544.8
+2025-05-01,Recreation,12667.0
+2025-06-01,Recreation,12774.6
+2025-07-01,Recreation,12709.2
+2025-08-01,Recreation,12674.0
+2025-09-01,Recreation,12781.8
+2025-10-01,Recreation,12913.5
+2025-11-01,Recreation,13219.3
+2025-12-01,Recreation,13117.4
+2026-01-01,Recreation,13124.2
+2026-02-01,Recreation,13265.5
+2026-03-01,Recreation,13450.0
+2026-04-01,Recreation,13434.2
+2026-05-01,Recreation,13523.6
+2026-06-01,Recreation,13713.8
+2026-07-01,Recreation,13952.2
+2026-08-01,Recreation,13757.1
+2012-07-01,Eating out,4796.7
+2012-08-01,Eating out,5089.0
+2012-09-01,Eating out,5234.6
+2012-10-01,Eating out,5131.5
+2012-11-01,Eating out,5150.7
+2012-12-01,Eating out,5154.0
+2013-01-01,Eating out,5089.1
+2013-02-01,Eating out,5197.9
+2013-03-01,Eating out,5167.7
+2013-04-01,Eating out,5043.0
+2013-05-01,Eating out,5141.9
+2013-06-01,Eating out,5324.5
+2013-07-01,Eating out,5129.1
+2013-08-01,Eating out,5284.3
+2013-09-01,Eating out,5333.4
+2013-10-01,Eating out,5287.4
+2013-11-01,Eating out,5312.1
+2013-12-01,Eating out,5300.3
+2014-01-01,Eating out,5445.0
+2014-02-01,Eating out,5463.7
+2014-03-01,Eating out,5511.5
+2014-04-01,Eating out,5567.6
+2014-05-01,Eating out,5600.3
+2014-06-01,Eating out,5588.7
+2014-07-01,Eating out,5802.5
+2014-08-01,Eating out,5591.9
+2014-09-01,Eating out,5599.6
+2014-10-01,Eating out,5646.0
+2014-11-01,Eating out,5638.1
+2014-12-01,Eating out,5799.4
+2015-01-01,Eating out,5597.5
+2015-02-01,Eating out,5881.6
+2015-03-01,Eating out,5825.1
+2015-04-01,Eating out,5746.0
+2015-05-01,Eating out,5623.8
+2015-06-01,Eating out,5785.8
+2015-07-01,Eating out,5768.2
+2015-08-01,Eating out,5751.4
+2015-09-01,Eating out,5680.5
+2015-10-01,Eating out,5932.5
+2015-11-01,Eating out,5741.6
+2015-12-01,Eating out,5802.1
+2016-01-01,Eating out,5801.4
+2016-02-01,Eating out,5840.1
+2016-03-01,Eating out,5930.4
+2016-04-01,Eating out,6135.2
+2016-05-01,Eating out,6074.2
+2016-06-01,Eating out,6061.7
+2016-07-01,Eating out,6158.6
+2016-08-01,Eating out,6184.0
+2016-09-01,Eating out,6169.2
+2016-10-01,Eating out,6114.6
+2016-11-01,Eating out,6020.8
+2016-12-01,Eating out,6061.2
+2017-01-01,Eating out,6130.9
+2017-02-01,Eating out,6267.4
+2017-03-01,Eating out,6041.7
+2017-04-01,Eating out,6237.5
+2017-05-01,Eating out,6289.8
+2017-06-01,Eating out,6232.8
+2017-07-01,Eating out,6246.9
+2017-08-01,Eating out,6220.8
+2017-09-01,Eating out,6310.1
+2017-10-01,Eating out,6322.6
+2017-11-01,Eating out,6684.6
+2017-12-01,Eating out,6640.2
+2018-01-01,Eating out,6484.3
+2018-02-01,Eating out,6614.3
+2018-03-01,Eating out,6535.2
+2018-04-01,Eating out,6532.5
+2018-05-01,Eating out,6714.1
+2018-06-01,Eating out,7010.9
+2018-07-01,Eating out,6768.9
+2018-08-01,Eating out,6907.5
+2018-09-01,Eating out,6961.4
+2018-10-01,Eating out,6838.8
+2018-11-01,Eating out,7014.1
+2018-12-01,Eating out,7103.8
+2019-01-01,Eating out,6833.6
+2019-02-01,Eating out,6476.8
+2019-03-01,Eating out,6790.3
+2019-04-01,Eating out,6640.8
+2019-05-01,Eating out,6589.7
+2019-06-01,Eating out,6577.4
+2019-07-01,Eating out,6701.7
+2019-08-01,Eating out,6756.7
+2019-09-01,Eating out,6705.3
+2019-10-01,Eating out,6806.4
+2019-11-01,Eating out,6718.4
+2019-12-01,Eating out,6593.2
+2020-01-01,Eating out,6751.7
+2020-02-01,Eating out,6343.7
+2020-03-01,Eating out,4839.6
+2020-04-01,Eating out,2899.3
+2020-05-01,Eating out,3816.0
+2020-06-01,Eating out,4948.6
+2020-07-01,Eating out,5241.4
+2020-08-01,Eating out,4942.3
+2020-09-01,Eating out,5112.4
+2020-10-01,Eating out,5208.0
+2020-11-01,Eating out,5392.9
+2020-12-01,Eating out,5561.8
+2021-01-01,Eating out,5600.5
+2021-02-01,Eating out,5541.6
+2021-03-01,Eating out,5789.2
+2021-04-01,Eating out,5781.8
+2021-05-01,Eating out,5959.3
+2021-06-01,Eating out,5608.9
+2021-07-01,Eating out,4754.8
+2021-08-01,Eating out,4546.4
+2021-09-01,Eating out,4860.6
+2021-10-01,Eating out,5530.5
+2021-11-01,Eating out,6338.7
+2021-12-01,Eating out,6603.1
+2022-01-01,Eating out,6444.5
+2022-02-01,Eating out,6997.8
+2022-03-01,Eating out,7268.1
+2022-04-01,Eating out,7744.3
+2022-05-01,Eating out,7871.8
+2022-06-01,Eating out,8102.4
+2022-07-01,Eating out,8247.3
+2022-08-01,Eating out,8400.9
+2022-09-01,Eating out,8716.3
+2022-10-01,Eating out,8796.0
+2022-11-01,Eating out,8790.3
+2022-12-01,Eating out,8951.9
+2023-01-01,Eating out,9371.2
+2023-02-01,Eating out,9272.4
+2023-03-01,Eating out,9377.8
+2023-04-01,Eating out,9444.2
+2023-05-01,Eating out,9489.0
+2023-06-01,Eating out,9552.8
+2023-07-01,Eating out,9624.5
+2023-08-01,Eating out,9675.1
+2023-09-01,Eating out,9805.9
+2023-10-01,Eating out,9709.2
+2023-11-01,Eating out,9785.6
+2023-12-01,Eating out,9765.3
+2024-01-01,Eating out,9963.4
+2024-02-01,Eating out,10007.8
+2024-03-01,Eating out,10016.6
+2024-04-01,Eating out,9833.5
+2024-05-01,Eating out,9912.6
+2024-06-01,Eating out,9958.6
+2024-07-01,Eating out,9960.3
+2024-08-01,Eating out,10085.8
+2024-09-01,Eating out,10153.2
+2024-10-01,Eating out,10190.7
+2024-11-01,Eating out,10221.1
+2024-12-01,Eating out,10295.6
+2025-01-01,Eating out,10331.8
+2025-02-01,Eating out,10373.1
+2025-03-01,Eating out,10313.8
+2025-04-01,Eating out,10574.7
+2025-05-01,Eating out,10579.1
+2025-06-01,Eating out,10526.8
+2025-07-01,Eating out,10646.7
+2025-08-01,Eating out,10648.2
+2025-09-01,Eating out,10620.5
+2025-10-01,Eating out,10817.2
+2025-11-01,Eating out,10916.5
+2025-12-01,Eating out,10949.8
+2026-01-01,Eating out,10880.6
+2026-02-01,Eating out,10937.9
+2026-03-01,Eating out,10869.1
+2026-04-01,Eating out,10949.4
+2026-05-01,Eating out,11151.2
+2026-06-01,Eating out,11162.7
+2026-07-01,Eating out,11287.3
+2026-08-01,Eating out,11382.1
+2012-07-01,Miscellaneous,4068.3
+2012-08-01,Miscellaneous,4049.2
+2012-09-01,Miscellaneous,4047.8
+2012-10-01,Miscellaneous,4043.8
+2012-11-01,Miscellaneous,4063.8
+2012-12-01,Miscellaneous,4072.2
+2013-01-01,Miscellaneous,4056.3
+2013-02-01,Miscellaneous,4252.0
+2013-03-01,Miscellaneous,4083.6
+2013-04-01,Miscellaneous,4145.2
+2013-05-01,Miscellaneous,4190.2
+2013-06-01,Miscellaneous,4220.2
+2013-07-01,Miscellaneous,4224.0
+2013-08-01,Miscellaneous,4237.3
+2013-09-01,Miscellaneous,4228.2
+2013-10-01,Miscellaneous,4246.8
+2013-11-01,Miscellaneous,4267.1
+2013-12-01,Miscellaneous,4298.9
+2014-01-01,Miscellaneous,4314.0
+2014-02-01,Miscellaneous,4331.9
+2014-03-01,Miscellaneous,4339.3
+2014-04-01,Miscellaneous,4370.5
+2014-05-01,Miscellaneous,4371.9
+2014-06-01,Miscellaneous,4375.5
+2014-07-01,Miscellaneous,4358.3
+2014-08-01,Miscellaneous,4352.5
+2014-09-01,Miscellaneous,4532.9
+2014-10-01,Miscellaneous,4452.1
+2014-11-01,Miscellaneous,4495.9
+2014-12-01,Miscellaneous,4525.5
+2015-01-01,Miscellaneous,4562.0
+2015-02-01,Miscellaneous,4603.8
+2015-03-01,Miscellaneous,4603.1
+2015-04-01,Miscellaneous,4571.1
+2015-05-01,Miscellaneous,4601.0
+2015-06-01,Miscellaneous,4621.8
+2015-07-01,Miscellaneous,4658.8
+2015-08-01,Miscellaneous,4662.4
+2015-09-01,Miscellaneous,4693.5
+2015-10-01,Miscellaneous,4705.3
+2015-11-01,Miscellaneous,4716.9
+2015-12-01,Miscellaneous,4738.1
+2016-01-01,Miscellaneous,4789.6
+2016-02-01,Miscellaneous,4688.0
+2016-03-01,Miscellaneous,4812.8
+2016-04-01,Miscellaneous,4839.2
+2016-05-01,Miscellaneous,4814.1
+2016-06-01,Miscellaneous,4836.3
+2016-07-01,Miscellaneous,4845.8
+2016-08-01,Miscellaneous,4855.3
+2016-09-01,Miscellaneous,4879.8
+2016-10-01,Miscellaneous,4946.3
+2016-11-01,Miscellaneous,4914.3
+2016-12-01,Miscellaneous,4920.9
+2017-01-01,Miscellaneous,4967.4
+2017-02-01,Miscellaneous,5052.7
+2017-03-01,Miscellaneous,4967.6
+2017-04-01,Miscellaneous,4987.1
+2017-05-01,Miscellaneous,4970.4
+2017-06-01,Miscellaneous,4962.0
+2017-07-01,Miscellaneous,4953.8
+2017-08-01,Miscellaneous,4951.4
+2017-09-01,Miscellaneous,4988.6
+2017-10-01,Miscellaneous,5036.6
+2017-11-01,Miscellaneous,5053.4
+2017-12-01,Miscellaneous,5116.6
+2018-01-01,Miscellaneous,5116.7
+2018-02-01,Miscellaneous,5164.9
+2018-03-01,Miscellaneous,5216.0
+2018-04-01,Miscellaneous,5234.2
+2018-05-01,Miscellaneous,5201.4
+2018-06-01,Miscellaneous,5193.0
+2018-07-01,Miscellaneous,5210.6
+2018-08-01,Miscellaneous,5155.5
+2018-09-01,Miscellaneous,5247.4
+2018-10-01,Miscellaneous,5298.6
+2018-11-01,Miscellaneous,5366.7
+2018-12-01,Miscellaneous,5357.8
+2019-01-01,Miscellaneous,5228.9
+2019-02-01,Miscellaneous,5286.3
+2019-03-01,Miscellaneous,5298.4
+2019-04-01,Miscellaneous,5221.4
+2019-05-01,Miscellaneous,5503.4
+2019-06-01,Miscellaneous,5371.6
+2019-07-01,Miscellaneous,5441.5
+2019-08-01,Miscellaneous,5439.0
+2019-09-01,Miscellaneous,5304.6
+2019-10-01,Miscellaneous,5336.3
+2019-11-01,Miscellaneous,5238.0
+2019-12-01,Miscellaneous,5214.1
+2020-01-01,Miscellaneous,5286.5
+2020-02-01,Miscellaneous,4999.8
+2020-03-01,Miscellaneous,4719.3
+2020-04-01,Miscellaneous,3348.1
+2020-05-01,Miscellaneous,3922.1
+2020-06-01,Miscellaneous,4365.7
+2020-07-01,Miscellaneous,4701.3
+2020-08-01,Miscellaneous,4458.9
+2020-09-01,Miscellaneous,4503.7
+2020-10-01,Miscellaneous,4594.0
+2020-11-01,Miscellaneous,4863.1
+2020-12-01,Miscellaneous,4972.5
+2021-01-01,Miscellaneous,4992.5
+2021-02-01,Miscellaneous,5042.4
+2021-03-01,Miscellaneous,5228.4
+2021-04-01,Miscellaneous,5372.9
+2021-05-01,Miscellaneous,5396.3
+2021-06-01,Miscellaneous,5199.5
+2021-07-01,Miscellaneous,4851.8
+2021-08-01,Miscellaneous,4545.0
+2021-09-01,Miscellaneous,4608.0
+2021-10-01,Miscellaneous,5225.7
+2021-11-01,Miscellaneous,5644.8
+2021-12-01,Miscellaneous,5613.2
+2022-01-01,Miscellaneous,5534.5
+2022-02-01,Miscellaneous,5775.7
+2022-03-01,Miscellaneous,5902.3
+2022-04-01,Miscellaneous,5966.1
+2022-05-01,Miscellaneous,6016.4
+2022-06-01,Miscellaneous,6049.1
+2022-07-01,Miscellaneous,6194.1
+2022-08-01,Miscellaneous,6161.7
+2022-09-01,Miscellaneous,6290.8
+2022-10-01,Miscellaneous,6263.8
+2022-11-01,Miscellaneous,6232.6
+2022-12-01,Miscellaneous,6046.4
+2023-01-01,Miscellaneous,6121.5
+2023-02-01,Miscellaneous,6247.0
+2023-03-01,Miscellaneous,6192.2
+2023-04-01,Miscellaneous,6197.1
+2023-05-01,Miscellaneous,6182.9
+2023-06-01,Miscellaneous,6189.2
+2023-07-01,Miscellaneous,6123.9
+2023-08-01,Miscellaneous,6163.1
+2023-09-01,Miscellaneous,6218.0
+2023-10-01,Miscellaneous,6166.8
+2023-11-01,Miscellaneous,6271.3
+2023-12-01,Miscellaneous,6283.6
+2024-01-01,Miscellaneous,6308.2
+2024-02-01,Miscellaneous,6239.0
+2024-03-01,Miscellaneous,6193.9
+2024-04-01,Miscellaneous,6392.3
+2024-05-01,Miscellaneous,6328.1
+2024-06-01,Miscellaneous,6423.1
+2024-07-01,Miscellaneous,6435.5
+2024-08-01,Miscellaneous,6475.9
+2024-09-01,Miscellaneous,6478.3
+2024-10-01,Miscellaneous,6543.3
+2024-11-01,Miscellaneous,6518.5
+2024-12-01,Miscellaneous,6608.0
+2025-01-01,Miscellaneous,6686.2
+2025-02-01,Miscellaneous,6720.5
+2025-03-01,Miscellaneous,6725.5
+2025-04-01,Miscellaneous,6757.4
+2025-05-01,Miscellaneous,6833.9
+2025-06-01,Miscellaneous,6900.7
+2025-07-01,Miscellaneous,6998.8
+2025-08-01,Miscellaneous,7032.1
+2025-09-01,Miscellaneous,7042.0
+2025-10-01,Miscellaneous,7142.9
+2025-11-01,Miscellaneous,7153.8
+2025-12-01,Miscellaneous,7107.1
+2026-01-01,Miscellaneous,7275.1
+2026-02-01,Miscellaneous,7252.0
+2026-03-01,Miscellaneous,7372.9
+2026-04-01,Miscellaneous,7290.5
+2026-05-01,Miscellaneous,7460.4
+2026-06-01,Miscellaneous,7430.2
+2026-07-01,Miscellaneous,7523.6
+2026-08-01,Miscellaneous,7547.7
