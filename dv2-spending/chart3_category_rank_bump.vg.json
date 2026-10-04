@@ -1,0 +1,158 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 420,
+  "padding": { "left": 10, "right": 190, "top": 10, "bottom": 10 },
+  "title": {
+    "text": "Health and education have climbed the ranks, food and clothing have slipped",
+    "subtitle": [
+      "Rank of 12 spending categories by dollars spent, every fifth financial year (to June).",
+      "Rank 1 = the category Australians spend the most on."
+    ]
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelColor": "#444444",
+      "titleColor": "#444444",
+      "gridColor": "#eeeeee",
+      "domainColor": "#999999",
+      "tickColor": "#999999"
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "data": { "url": "data/hfce_fy.csv" },
+  "transform": [
+    {
+      "calculate": "indexof(['Education', 'Insurance, finance & other', 'Health', 'Food', 'Clothing'], datum.category) >= 0 ? 'mover' : 'other'",
+      "as": "group"
+    }
+  ],
+  "layer": [
+    {
+      "description": "Dashed marker for the COVID-19 year",
+      "data": { "values": [ { "fy_label": "2020–21" } ] },
+      "mark": { "type": "rule", "strokeDash": [4, 4], "color": "#999999" },
+      "encoding": {
+        "x": { "field": "fy_label", "type": "ordinal", "scale": { "type": "point", "padding": 0.5 } }
+      }
+    },
+    {
+      "description": "COVID-19 note above rank 1",
+      "data": { "values": [ { "fy_label": "2020–21", "y_label": 0.45, "text": "COVID-19 year" } ] },
+      "mark": { "type": "text", "align": "center", "baseline": "middle", "fontSize": 12, "color": "#555555" },
+      "encoding": {
+        "x": { "field": "fy_label", "type": "ordinal", "scale": { "type": "point", "padding": 0.5 } },
+        "y": { "field": "y_label", "type": "quantitative", "scale": { "domain": [12.5, 0.2], "nice": false } },
+        "text": { "field": "text" }
+      }
+    },
+    {
+      "description": "One line per category: the five movers are thick, the rest thin",
+      "mark": { "type": "line" },
+      "encoding": {
+        "x": {
+          "field": "fy_label",
+          "type": "ordinal",
+          "title": null,
+          "scale": { "type": "point", "padding": 0.5 },
+          "axis": { "labelAngle": 0, "grid": false }
+        },
+        "y": {
+          "field": "rank",
+          "type": "quantitative",
+          "title": "Rank (1 = biggest)",
+          "scale": { "domain": [12.5, 0.2], "nice": false },
+          "axis": { "values": [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12], "format": "d", "labelOverlap": false }
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Housing & utilities", "Insurance, finance & other", "Transport", "Recreation",
+              "Food", "Eating out & hotels", "Health", "Furnishings",
+              "Education", "Clothing", "Alcohol & tobacco", "Communications"
+            ],
+            "range": [
+              "#7570b3", "#a6761d", "#1f78b4", "#e7298a",
+              "#d95f02", "#a6cee3", "#1b9e77", "#cab2d6",
+              "#e31a1c", "#e6ab02", "#fb9a99", "#66a61e"
+            ]
+          }
+        },
+        "strokeWidth": {
+          "condition": { "test": "datum.group === 'mover'", "value": 4 },
+          "value": 1.5
+        }
+      }
+    },
+    {
+      "description": "A dot at each year; also carries the tooltip",
+      "mark": { "type": "point", "filled": true, "opacity": 1 },
+      "encoding": {
+        "x": { "field": "fy_label", "type": "ordinal", "scale": { "type": "point", "padding": 0.5 } },
+        "y": { "field": "rank", "type": "quantitative", "scale": { "domain": [12.5, 0.2], "nice": false } },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Housing & utilities", "Insurance, finance & other", "Transport", "Recreation",
+              "Food", "Eating out & hotels", "Health", "Furnishings",
+              "Education", "Clothing", "Alcohol & tobacco", "Communications"
+            ],
+            "range": [
+              "#7570b3", "#a6761d", "#1f78b4", "#e7298a",
+              "#d95f02", "#a6cee3", "#1b9e77", "#cab2d6",
+              "#e31a1c", "#e6ab02", "#fb9a99", "#66a61e"
+            ]
+          }
+        },
+        "size": {
+          "condition": { "test": "datum.group === 'mover'", "value": 140 },
+          "value": 60
+        },
+        "tooltip": [
+          { "field": "category", "type": "nominal", "title": "Category" },
+          { "field": "fy_label", "type": "ordinal", "title": "Financial year" },
+          { "field": "rank", "type": "quantitative", "title": "Rank" },
+          { "field": "share_pct", "type": "quantitative", "title": "Share of spending (%)", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "description": "Bold name labels at the right end for the five movers",
+      "transform": [ { "filter": "datum.fy == 2026 && datum.group === 'mover'" } ],
+      "mark": { "type": "text", "align": "left", "baseline": "middle", "dx": 14, "fontSize": 12, "fontWeight": "bold", "color": "#222222" },
+      "encoding": {
+        "x": { "field": "fy_label", "type": "ordinal", "scale": { "type": "point", "padding": 0.5 } },
+        "y": { "field": "rank", "type": "quantitative", "scale": { "domain": [12.5, 0.2], "nice": false } },
+        "text": { "field": "category" }
+      }
+    },
+    {
+      "description": "Plain name labels at the right end for the other categories",
+      "transform": [ { "filter": "datum.fy == 2026 && datum.group === 'other'" } ],
+      "mark": { "type": "text", "align": "left", "baseline": "middle", "dx": 14, "fontSize": 12, "color": "#333333" },
+      "encoding": {
+        "x": { "field": "fy_label", "type": "ordinal", "scale": { "type": "point", "padding": 0.5 } },
+        "y": { "field": "rank", "type": "quantitative", "scale": { "domain": [12.5, 0.2], "nice": false } },
+        "text": { "field": "category" }
+      }
+    }
+  ]
+}
