@@ -1,0 +1,113 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 800,
+  "height": 380,
+  "padding": { "left": 10, "right": 120, "top": 10, "bottom": 10 },
+  "title": {
+    "text": "Eating out and health spending have roughly doubled since 2013",
+    "subtitle": [
+      "Monthly spending in nine categories tracked by the ABS indicator, seasonally adjusted, current prices.",
+      "Each band's thickness is its monthly spending. Click a band to highlight it; double-click to reset."
+    ]
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "labelColor": "#444444",
+      "domainColor": "#999999",
+      "tickColor": "#999999"
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "data": {
+    "url": "data/category_monthly_sa.csv",
+    "format": { "parse": { "date": "date:'%Y-%m-%d'" } }
+  },
+  "transform": [
+    {
+      "calculate": "indexof(['Food', 'Transport', 'Clothing', 'Health', 'Alcohol & tobacco', 'Furnishings', 'Miscellaneous', 'Recreation', 'Eating out'], datum.category)",
+      "as": "stack_order"
+    },
+    { "calculate": "datum.spend_m / 1000", "as": "spend_bn" }
+  ],
+  "layer": [
+    {
+      "description": "The streamgraph: stacked areas centred around a moving middle line",
+      "mark": { "type": "area", "stroke": "white", "strokeWidth": 0.6 },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": null,
+          "axis": { "format": "%Y", "tickCount": "year", "grid": false }
+        },
+        "y": { "field": "spend_bn", "type": "quantitative", "stack": "center", "axis": null },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Food", "Transport", "Clothing", "Health", "Alcohol & tobacco",
+              "Furnishings", "Miscellaneous", "Recreation", "Eating out"
+            ],
+            "range": [
+              "#d95f02", "#1f78b4", "#e6ab02", "#1b9e77", "#fb9a99",
+              "#cab2d6", "#a6761d", "#e7298a", "#a6cee3"
+            ]
+          }
+        },
+        "order": { "field": "stack_order", "type": "quantitative" },
+        "opacity": {
+          "condition": { "param": "pick_category", "value": 1 },
+          "value": 0.3
+        }
+      }
+    },
+    {
+      "description": "Invisible month-wide bars on top: they give a tooltip and receive the clicks",
+      "params": [
+        {
+          "name": "pick_category",
+          "select": { "type": "point", "fields": ["category"] }
+        }
+      ],
+      "mark": { "type": "bar", "opacity": 0, "width": { "band": 1 } },
+      "encoding": {
+        "x": { "field": "date", "type": "temporal", "timeUnit": "yearmonth" },
+        "y": { "field": "spend_bn", "type": "quantitative", "stack": "center" },
+        "color": { "field": "category", "type": "nominal", "legend": null },
+        "order": { "field": "stack_order", "type": "quantitative" },
+        "tooltip": [
+          { "field": "category", "type": "nominal", "title": "Category" },
+          { "field": "date", "type": "temporal", "timeUnit": "yearmonth", "title": "Month", "format": "%b %Y" },
+          { "field": "spend_bn", "type": "quantitative", "title": "Spending ($ billion)", "format": ".1f" }
+        ]
+      }
+    },
+    {
+      "description": "Band names at the right edge (latest month)",
+      "transform": [
+        { "filter": "year(datum.date) == 2026 && month(datum.date) == 7" }
+      ],
+      "mark": { "type": "text", "align": "left", "baseline": "middle", "dx": 8, "fontSize": 12, "color": "#333333" },
+      "encoding": {
+        "x": { "field": "date", "type": "temporal" },
+        "y": { "field": "spend_bn", "type": "quantitative", "stack": "center" },
+        "detail": { "field": "category", "type": "nominal" },
+        "order": { "field": "stack_order", "type": "quantitative" },
+        "text": { "field": "category" }
+      }
+    }
+  ]
+}
