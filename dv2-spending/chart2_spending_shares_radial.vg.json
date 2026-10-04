@@ -1,0 +1,126 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 480,
+  "height": 480,
+  "title": {
+    "text": "Housing takes about a quarter of what Australians spend",
+    "subtitle": [
+      "Share of all household spending, July 2025 to June 2026 (total $1,523 billion).",
+      "Housing includes an estimated rent value for homes people own."
+    ]
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "data": { "url": "data/hfce_fy.csv" },
+  "transform": [
+    { "filter": "datum.fy == 2026" },
+    { "calculate": "datum.rank - 1", "as": "ring_outer" },
+    { "calculate": "datum.rank - 1 + 0.78", "as": "ring_inner" },
+    { "calculate": "datum.rank - 1 + 0.39", "as": "ring_mid" },
+    { "calculate": "datum.category + '  ' + format(datum.share_pct, '.1f') + '%'", "as": "label" },
+    { "calculate": "datum.spend_m / 1000", "as": "spend_bn" }
+  ],
+  "layer": [
+    {
+      "description": "Light grey track behind each ring (a ring that reaches the end would be 25%)",
+      "mark": { "type": "arc" },
+      "encoding": {
+        "theta": {
+          "datum": 25,
+          "scale": { "type": "linear", "domain": [0, 25], "range": [0, 4.71239] },
+          "stack": null
+        },
+        "theta2": { "datum": 0 },
+        "radius": {
+          "field": "ring_outer",
+          "type": "quantitative",
+          "scale": { "type": "linear", "domain": [0, 12], "range": [228, 48] }
+        },
+        "radius2": { "field": "ring_inner" },
+        "color": { "value": "#efefef" }
+      }
+    },
+    {
+      "description": "The coloured arcs: angle = share of spending",
+      "mark": { "type": "arc" },
+      "encoding": {
+        "theta": {
+          "field": "share_pct",
+          "type": "quantitative",
+          "scale": { "type": "linear", "domain": [0, 25], "range": [0, 4.71239] },
+          "stack": null
+        },
+        "theta2": { "datum": 0 },
+        "radius": {
+          "field": "ring_outer",
+          "type": "quantitative",
+          "scale": { "type": "linear", "domain": [0, 12], "range": [228, 48] }
+        },
+        "radius2": { "field": "ring_inner" },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "legend": null,
+          "scale": {
+            "domain": [
+              "Housing & utilities", "Insurance, finance & other", "Transport", "Recreation",
+              "Food", "Eating out & hotels", "Health", "Furnishings",
+              "Education", "Clothing", "Alcohol & tobacco", "Communications"
+            ],
+            "range": [
+              "#7570b3", "#a6761d", "#1f78b4", "#e7298a",
+              "#d95f02", "#a6cee3", "#1b9e77", "#cab2d6",
+              "#e31a1c", "#e6ab02", "#fb9a99", "#66a61e"
+            ]
+          }
+        },
+        "tooltip": [
+          { "field": "category", "type": "nominal", "title": "Category" },
+          { "field": "share_pct", "type": "quantitative", "title": "Share of spending (%)", "format": ".1f" },
+          { "field": "spend_bn", "type": "quantitative", "title": "Spending ($ billion)", "format": ",.0f" }
+        ]
+      }
+    },
+    {
+      "description": "Label at the start of each ring (12 o'clock), written to its left",
+      "mark": { "type": "text", "align": "right", "baseline": "middle", "dx": -6, "fontSize": 11, "color": "#333333" },
+      "encoding": {
+        "theta": {
+          "datum": 0,
+          "scale": { "type": "linear", "domain": [0, 25], "range": [0, 4.71239] }
+        },
+        "radius": {
+          "field": "ring_mid",
+          "type": "quantitative",
+          "scale": { "type": "linear", "domain": [0, 12], "range": [228, 48] }
+        },
+        "text": { "field": "label" }
+      }
+    },
+    {
+      "description": "Text in the middle of the chart",
+      "mark": {
+        "type": "text",
+        "text": ["July 2025", "to June 2026"],
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 12,
+        "color": "#555555"
+      },
+      "encoding": {
+        "x": { "value": 240 },
+        "y": { "value": 240 }
+      }
+    }
+  ]
+}
