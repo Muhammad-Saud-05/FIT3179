@@ -1,0 +1,123 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 562,
+  "title": {
+    "text": [
+      "Household spending is growing fastest in the",
+      "Northern Territory and Western Australia"
+    ],
+    "subtitle": [
+      "How much more households spent in the 12 months to August 2026 than the 12 months before.",
+      "Darker states grew faster. Australia overall: +5.7%.",
+      "Includes price rises. Spending tracked by the ABS indicator."
+    ]
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [-18, -36],
+    "rotate": [-132, 0]
+  },
+  "layer": [
+    {
+      "description": "The states, coloured by growth in four classes",
+      "data": {
+        "url": "data/aus_states.topojson",
+        "format": { "type": "topojson", "feature": "aus_states" }
+      },
+      "transform": [
+        {
+          "lookup": "properties.name",
+          "from": {
+            "data": { "url": "data/states.csv" },
+            "key": "state",
+            "fields": ["growth_pct", "year_total_bn"]
+          }
+        }
+      ],
+      "mark": { "type": "geoshape", "stroke": "white", "strokeWidth": 1 },
+      "encoding": {
+        "color": {
+          "field": "growth_pct",
+          "type": "quantitative",
+          "title": "Growth in spending (%)",
+          "scale": {
+            "type": "threshold",
+            "domain": [5, 6, 7.5],
+            "range": ["#eef3e0", "#becd99", "#869f53", "#5a732a"]
+          },
+          "legend": { "orient": "bottom", "direction": "horizontal", "format": ".1f" }
+        },
+        "tooltip": [
+          { "field": "properties.name", "type": "nominal", "title": "State" },
+          { "field": "growth_pct", "type": "quantitative", "title": "Growth on previous 12 months (%)", "format": ".1f" },
+          { "field": "year_total_bn", "type": "quantitative", "title": "Spending in 12 months ($ billion)", "format": ",.0f" }
+        ]
+      }
+    },
+    {
+      "description": "Leader line from the tiny ACT out to its label in the sea",
+      "data": { "url": "data/state_points.csv" },
+      "transform": [ { "filter": "datum.code === 'ACT'" } ],
+      "mark": { "type": "rule", "stroke": "#555555", "strokeWidth": 0.8 },
+      "encoding": {
+        "longitude": { "field": "lon", "type": "quantitative" },
+        "latitude": { "field": "lat", "type": "quantitative" },
+        "longitude2": { "field": "label_lon" },
+        "latitude2": { "field": "label_lat" }
+      }
+    },
+    {
+      "description": "State labels written inside each state: code and growth",
+      "data": { "url": "data/state_points.csv" },
+      "transform": [
+        { "filter": "datum.code !== 'ACT'" },
+        {
+          "lookup": "code",
+          "from": { "data": { "url": "data/states.csv" }, "key": "code", "fields": ["growth_pct"] }
+        },
+        { "calculate": "datum.code + ' ' + format(datum.growth_pct, '.1f') + '%'", "as": "label" }
+      ],
+      "mark": { "type": "text", "align": "center", "baseline": "middle", "fontSize": 11, "fontWeight": "bold" },
+      "encoding": {
+        "longitude": { "field": "label_lon", "type": "quantitative" },
+        "latitude": { "field": "label_lat", "type": "quantitative" },
+        "text": { "field": "label" },
+        "color": {
+          "condition": { "test": "datum.growth_pct >= 7.5", "value": "white" },
+          "value": "#222222"
+        }
+      }
+    },
+    {
+      "description": "The ACT label, placed in the sea to the right of the leader line",
+      "data": { "url": "data/state_points.csv" },
+      "transform": [
+        { "filter": "datum.code === 'ACT'" },
+        {
+          "lookup": "code",
+          "from": { "data": { "url": "data/states.csv" }, "key": "code", "fields": ["growth_pct"] }
+        },
+        { "calculate": "datum.code + ' ' + format(datum.growth_pct, '.1f') + '%'", "as": "label" }
+      ],
+      "mark": { "type": "text", "align": "left", "baseline": "middle", "dx": 3, "fontSize": 11, "fontWeight": "bold", "color": "#222222" },
+      "encoding": {
+        "longitude": { "field": "label_lon", "type": "quantitative" },
+        "latitude": { "field": "label_lat", "type": "quantitative" },
+        "text": { "field": "label" }
+      }
+    }
+  ]
+}
