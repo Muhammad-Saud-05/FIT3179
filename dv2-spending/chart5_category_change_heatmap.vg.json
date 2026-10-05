@@ -1,0 +1,153 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 760,
+  "height": { "step": 30 },
+  "title": {
+    "text": [
+      "Eating out and transport spending fell by more than half in April 2020,",
+      "then rebounded the following year"
+    ],
+    "subtitle": [
+      "Change in each category's spending compared with the same month a year earlier.",
+      "The 2021 jumps compare with the weak 2020 months. Rows are sorted by the April 2020 change.",
+      "Seasonally adjusted. Includes price rises. Spending tracked by the ABS indicator."
+    ],
+    "offset": 26
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelColor": "#444444",
+      "titleColor": "#444444",
+      "gridColor": "#e8e8e8",
+      "domainColor": "#999999",
+      "tickColor": "#999999"
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "data": { "url": "data/category_yoy_sa.csv", "format": { "parse": { "date": "date:'%Y-%m-%d'" } } },
+  "transform": [
+    { "calculate": "timeOffset('month', datum.date, 1)", "as": "date_end" },
+    {
+      "calculate": "datum.yoy_pct < -40 ? 'Down 40% or more' : datum.yoy_pct < -20 ? 'Down 20% to 40%' : datum.yoy_pct < -5 ? 'Down 5% to 20%' : datum.yoy_pct < 5 ? 'Within 5% either way' : datum.yoy_pct < 20 ? 'Up 5% to 20%' : datum.yoy_pct < 40 ? 'Up 20% to 40%' : 'Up 40% or more'",
+      "as": "change_group"
+    }
+  ],
+  "layer": [
+    {
+      "mark": { "type": "rect", "stroke": "#ffffff", "strokeWidth": 0.5 },
+      "encoding": {
+        "x": {
+          "field": "date",
+          "type": "temporal",
+          "title": null,
+          "scale": { "nice": false },
+          "axis": { "format": "%Y", "tickCount": "year", "grid": false }
+        },
+        "x2": { "field": "date_end" },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": [
+            "Eating out",
+            "Transport",
+            "Clothing",
+            "Miscellaneous",
+            "Health",
+            "Recreation",
+            "Alcohol & tobacco",
+            "Food",
+            "Furnishings"
+          ],
+          "title": null,
+          "axis": { "domain": false, "ticks": false, "labelPadding": 8 }
+        },
+        "color": {
+          "field": "change_group",
+          "type": "ordinal",
+          "title": "Change from the same month a year earlier",
+          "scale": {
+            "domain": [
+              "Down 40% or more",
+              "Down 20% to 40%",
+              "Down 5% to 20%",
+              "Within 5% either way",
+              "Up 5% to 20%",
+              "Up 20% to 40%",
+              "Up 40% or more"
+            ],
+            "range": ["#a54793", "#cf79bc", "#eeb6e0", "#ebebe6", "#becd99", "#869f53", "#5a732a"]
+          },
+          "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 4,
+            "symbolType": "square",
+            "symbolSize": 150,
+            "titleFontSize": 12,
+            "labelFontSize": 11
+          }
+        },
+        "tooltip": [
+          { "field": "date", "type": "temporal", "title": "Month", "format": "%b %Y" },
+          { "field": "category", "type": "nominal", "title": "Category" },
+          {
+            "field": "yoy_pct",
+            "type": "quantitative",
+            "title": "Change from a year earlier (%)",
+            "format": "+.1f"
+          }
+        ]
+      }
+    },
+    {
+      "data": {
+        "values": [
+          { "date": "2020-04-01", "category": "Eating out", "label": "Apr 2020 ▼" },
+          { "date": "2021-04-01", "category": "Eating out", "label": "Apr 2021 ▼" }
+        ],
+        "format": { "parse": { "date": "date:'%Y-%m-%d'" } }
+      },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "bottom",
+        "dx": 9,
+        "dy": -17,
+        "fontSize": 11,
+        "color": "#333333"
+      },
+      "encoding": {
+        "x": { "field": "date", "type": "temporal", "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": [
+            "Eating out",
+            "Transport",
+            "Clothing",
+            "Miscellaneous",
+            "Health",
+            "Recreation",
+            "Alcohol & tobacco",
+            "Food",
+            "Furnishings"
+          ],
+          "axis": null
+        },
+        "text": { "field": "label" }
+      }
+    }
+  ]
+}
