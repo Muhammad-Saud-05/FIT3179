@@ -1,0 +1,110 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 562,
+  "title": {
+    "text": [
+      "New South Wales and Victoria together account for",
+      "56% of Australia's tracked household spending"
+    ],
+    "subtitle": [
+      "Average spending a month in each state or territory, 12 months to August 2026, in $ billion.",
+      "Circle area shows how much is spent in total. Tracked spending leaves out rent, education,",
+      "communications, electricity and gas."
+    ]
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "projection": {
+    "type": "conicEqualArea",
+    "parallels": [-18, -36],
+    "rotate": [-132, 0]
+  },
+  "layer": [
+    {
+      "description": "Base map: the states in light grey",
+      "data": {
+        "url": "data/aus_states.topojson",
+        "format": { "type": "topojson", "feature": "aus_states" }
+      },
+      "mark": { "type": "geoshape", "fill": "#e6e6e6", "stroke": "white", "strokeWidth": 1 }
+    },
+    {
+      "description": "One circle per state; circle area = average spending a month",
+      "data": { "url": "data/state_points.csv" },
+      "transform": [
+        {
+          "lookup": "code",
+          "from": {
+            "data": { "url": "data/states.csv" },
+            "key": "code",
+            "fields": ["avg_monthly_bn", "year_total_bn"]
+          }
+        }
+      ],
+      "mark": { "type": "circle", "fill": "#333333", "fillOpacity": 0.7, "stroke": "white", "strokeWidth": 1.5 },
+      "encoding": {
+        "longitude": { "field": "lon", "type": "quantitative" },
+        "latitude": { "field": "lat", "type": "quantitative" },
+        "size": {
+          "field": "avg_monthly_bn",
+          "type": "quantitative",
+          "title": "Average spending a month ($ billion)",
+          "scale": { "type": "linear", "domain": [0, 25.16], "range": [0, 5200] },
+          "legend": { "orient": "bottom", "direction": "horizontal", "values": [1, 5, 10, 20], "symbolFillColor": "#333333" }
+        },
+        "tooltip": [
+          { "field": "state", "type": "nominal", "title": "State" },
+          { "field": "avg_monthly_bn", "type": "quantitative", "title": "Average spending a month ($ billion)", "format": ".2f" },
+          { "field": "year_total_bn", "type": "quantitative", "title": "Spending in 12 months ($ billion)", "format": ",.0f" }
+        ]
+      }
+    },
+    {
+      "description": "Labels to the right of their circles",
+      "data": { "url": "data/state_points.csv" },
+      "transform": [
+        { "filter": "datum.sym_side === 'right'" },
+        {
+          "lookup": "code",
+          "from": { "data": { "url": "data/states.csv" }, "key": "code", "fields": ["avg_monthly_bn"] }
+        },
+        { "calculate": "datum.code + ' ' + format(datum.avg_monthly_bn, '.1f')", "as": "label" }
+      ],
+      "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 11, "fontWeight": "bold", "color": "#222222" },
+      "encoding": {
+        "longitude": { "field": "sym_label_lon", "type": "quantitative" },
+        "latitude": { "field": "sym_label_lat", "type": "quantitative" },
+        "text": { "field": "label" }
+      }
+    },
+    {
+      "description": "Labels to the left of their circles (Victoria)",
+      "data": { "url": "data/state_points.csv" },
+      "transform": [
+        { "filter": "datum.sym_side === 'left'" },
+        {
+          "lookup": "code",
+          "from": { "data": { "url": "data/states.csv" }, "key": "code", "fields": ["avg_monthly_bn"] }
+        },
+        { "calculate": "datum.code + ' ' + format(datum.avg_monthly_bn, '.1f')", "as": "label" }
+      ],
+      "mark": { "type": "text", "align": "right", "baseline": "middle", "fontSize": 11, "fontWeight": "bold", "color": "#222222" },
+      "encoding": {
+        "longitude": { "field": "sym_label_lon", "type": "quantitative" },
+        "latitude": { "field": "sym_label_lat", "type": "quantitative" },
+        "text": { "field": "label" }
+      }
+    }
+  ]
+}
