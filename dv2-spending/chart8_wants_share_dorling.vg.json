@@ -41,7 +41,7 @@
       ],
       "mark": { "type": "circle", "stroke": "#333333", "strokeWidth": 1, "opacity": 1 },
       "encoding": {
-        "x": { "field": "x", "type": "quantitative", "scale": { "domain": [0, 600], "nice": false, "zero": false }, "axis": null },
+        "x": { "field": "x", "type": "quantitative", "scale": { "domain": [-30, 600], "nice": false, "zero": false }, "axis": null },
         "y": { "field": "y", "type": "quantitative", "scale": { "domain": [492, 0], "nice": false, "zero": false }, "axis": null },
         "size": {
           "field": "dollars_added_bn",
