@@ -1,0 +1,229 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 620,
+  "height": { "step": 34 },
+  "title": {
+    "text": [
+      "Recreation and miscellaneous spending grew fastest in the past year,",
+      "alcohol and tobacco spending fell"
+    ],
+    "subtitle": [
+      "Growth in each category's spending in the 12 months to August 2026 compared with the 12 months before.",
+      "Includes price rises. Spending tracked by the ABS indicator. Stems start at zero.",
+      "The dashed line is growth in all tracked spending."
+    ],
+    "offset": 30
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelColor": "#444444",
+      "titleColor": "#444444",
+      "gridColor": "#e8e8e8",
+      "domainColor": "#999999",
+      "tickColor": "#999999"
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "data": { "url": "data/category_growth.csv" },
+  "transform": [
+    {
+      "calculate": "(datum.growth_pct >= 0 ? '+' : '') + format(datum.growth_pct, '.1f') + '%'",
+      "as": "label"
+    }
+  ],
+  "layer": [
+    {
+      "description": "Zero line",
+      "data": { "values": [{ "zero": 0 }] },
+      "mark": { "type": "rule", "color": "#333333", "strokeWidth": 1 },
+      "encoding": {
+        "x": { "field": "zero", "type": "quantitative", "scale": { "domain": [-13, 11], "nice": false }, "axis": null }
+      }
+    },
+    {
+      "description": "Dashed line for all tracked spending",
+      "transform": [{ "filter": "datum.category == 'All tracked spending'" }],
+      "mark": { "type": "rule", "color": "#333333", "strokeWidth": 1.5, "strokeDash": [5, 4] },
+      "encoding": {
+        "x": { "field": "growth_pct", "type": "quantitative", "scale": { "domain": [-13, 11], "nice": false }, "title": null, "axis": null },
+        "tooltip": [
+          { "field": "category", "type": "nominal", "title": "Measure" },
+          { "field": "growth_pct", "type": "quantitative", "title": "Growth (%)", "format": "+.1f" }
+        ]
+      }
+    },
+    {
+      "description": "Stems from zero to the growth rate",
+      "transform": [{ "filter": "datum.category != 'All tracked spending'" }],
+      "mark": { "type": "rule", "strokeWidth": 3 },
+      "encoding": {
+        "x": {
+          "field": "growth_pct",
+          "type": "quantitative",
+          "scale": { "domain": [-13, 11], "nice": false },
+          "title": null,
+          "axis": {
+            "values": [-10, -5, 0, 5, 10],
+            "labelExpr": "datum.value > 0 ? '+' + datum.value + '%' : datum.value + '%'",
+            "grid": true,
+            "domain": false
+          }
+        },
+        "x2": { "datum": 0 },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "growth_pct", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": { "domain": false, "ticks": false, "labelPadding": 10, "labelLimit": 160 }
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Food",
+              "Alcohol & tobacco",
+              "Clothing",
+              "Furnishings",
+              "Health",
+              "Transport",
+              "Recreation",
+              "Eating out",
+              "Miscellaneous"
+            ],
+            "range": [
+              "#d95f02",
+              "#fb9a99",
+              "#e6ab02",
+              "#cab2d6",
+              "#1b9e77",
+              "#1f78b4",
+              "#e7298a",
+              "#a6cee3",
+              "#a6761d"
+            ]
+          },
+          "legend": null
+        }
+      }
+    },
+    {
+      "description": "Dots at the end of each stem",
+      "transform": [{ "filter": "datum.category != 'All tracked spending'" }],
+      "mark": { "type": "circle", "size": 190, "opacity": 1, "stroke": "#444444", "strokeWidth": 0.8 },
+      "encoding": {
+        "x": { "field": "growth_pct", "type": "quantitative", "scale": { "domain": [-13, 11], "nice": false }, "title": null, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "growth_pct", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": { "domain": false, "ticks": false, "labelPadding": 10, "labelLimit": 160 }
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Food",
+              "Alcohol & tobacco",
+              "Clothing",
+              "Furnishings",
+              "Health",
+              "Transport",
+              "Recreation",
+              "Eating out",
+              "Miscellaneous"
+            ],
+            "range": [
+              "#d95f02",
+              "#fb9a99",
+              "#e6ab02",
+              "#cab2d6",
+              "#1b9e77",
+              "#1f78b4",
+              "#e7298a",
+              "#a6cee3",
+              "#a6761d"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "category", "type": "nominal", "title": "Category" },
+          { "field": "growth_pct", "type": "quantitative", "title": "Growth (%)", "format": "+.1f" },
+          { "field": "year_to_aug26_m", "type": "quantitative", "title": "12 months to Aug 2026 ($ million)", "format": ",.0f" },
+          { "field": "year_to_aug25_m", "type": "quantitative", "title": "12 months before ($ million)", "format": ",.0f" }
+        ]
+      }
+    },
+    {
+      "description": "Value labels for growth",
+      "transform": [
+        { "filter": "datum.category != 'All tracked spending'" },
+        { "filter": "datum.growth_pct >= 0" }
+      ],
+      "mark": { "type": "text", "align": "left", "baseline": "middle", "dx": 12, "fontSize": 12, "color": "#222222" },
+      "encoding": {
+        "x": { "field": "growth_pct", "type": "quantitative", "scale": { "domain": [-13, 11], "nice": false }, "title": null, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "growth_pct", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": { "domain": false, "ticks": false, "labelPadding": 10, "labelLimit": 160 }
+        },
+        "text": { "field": "label" }
+      }
+    },
+    {
+      "description": "Value labels for falls",
+      "transform": [
+        { "filter": "datum.category != 'All tracked spending'" },
+        { "filter": "datum.growth_pct < 0" }
+      ],
+      "mark": { "type": "text", "align": "right", "baseline": "middle", "dx": -12, "fontSize": 12, "color": "#222222" },
+      "encoding": {
+        "x": { "field": "growth_pct", "type": "quantitative", "scale": { "domain": [-13, 11], "nice": false }, "title": null, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "growth_pct", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": { "domain": false, "ticks": false, "labelPadding": 10, "labelLimit": 160 }
+        },
+        "text": { "field": "label" }
+      }
+    },
+    {
+      "description": "Label for the dashed line",
+      "transform": [
+        { "filter": "datum.category == 'All tracked spending'" },
+        { "calculate": "'All tracked spending: ' + datum.label", "as": "ref_text" }
+      ],
+      "mark": { "type": "text", "align": "right", "baseline": "bottom", "dx": -6, "dy": -21, "fontSize": 11, "color": "#333333" },
+      "encoding": {
+        "x": { "field": "growth_pct", "type": "quantitative", "scale": { "domain": [-13, 11], "nice": false }, "title": null, "axis": null },
+        "y": {
+          "datum": "Miscellaneous",
+          "type": "nominal",
+          "sort": { "field": "growth_pct", "op": "max", "order": "descending" }
+        },
+        "text": { "field": "ref_text" }
+      }
+    }
+  ]
+}
