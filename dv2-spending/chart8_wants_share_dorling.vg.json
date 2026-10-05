@@ -1,0 +1,134 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 600,
+  "height": 492,
+  "title": {
+    "text": [
+      "New South Wales added the most dollars,",
+      "but the Northern Territory grew fastest"
+    ],
+    "subtitle": [
+      "Circle area: extra spending in the 12 months to August 2026 vs the 12 months before.",
+      "Colour: growth in spending (%), in the same four groups as the growth map.",
+      "Includes price rises. Spending tracked by the ABS indicator."
+    ]
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "layer": [
+    {
+      "description": "One circle per state: area = extra spending, colour = growth rate",
+      "data": { "url": "data/dorling_positions.csv" },
+      "transform": [
+        {
+          "lookup": "code",
+          "from": {
+            "data": { "url": "data/states.csv" },
+            "key": "code",
+            "fields": ["dollars_added_bn", "growth_pct", "year_total_bn"]
+          }
+        }
+      ],
+      "mark": { "type": "circle", "stroke": "#333333", "strokeWidth": 1, "opacity": 1 },
+      "encoding": {
+        "x": { "field": "x", "type": "quantitative", "scale": { "domain": [0, 600], "nice": false, "zero": false }, "axis": null },
+        "y": { "field": "y", "type": "quantitative", "scale": { "domain": [492, 0], "nice": false, "zero": false }, "axis": null },
+        "size": {
+          "field": "dollars_added_bn",
+          "type": "quantitative",
+          "title": "Extra spending ($ billion)",
+          "scale": { "type": "linear", "domain": [0, 14.77], "range": [0, 12000] },
+          "legend": { "orient": "bottom-left", "values": [1, 5, 10], "symbolFillColor": "#dddddd", "offset": 4 }
+        },
+        "color": {
+          "field": "growth_pct",
+          "type": "quantitative",
+          "title": "Growth in spending (%)",
+          "scale": {
+            "type": "threshold",
+            "domain": [5, 6, 7.5],
+            "range": ["#eef3e0", "#becd99", "#869f53", "#5a732a"]
+          },
+          "legend": { "orient": "top-left", "format": ".1f" }
+        },
+        "tooltip": [
+          { "field": "state", "type": "nominal", "title": "State" },
+          { "field": "growth_pct", "type": "quantitative", "title": "Growth on previous 12 months (%)", "format": ".1f" },
+          { "field": "dollars_added_bn", "type": "quantitative", "title": "Extra spending ($ billion)", "format": ".2f" },
+          { "field": "year_total_bn", "type": "quantitative", "title": "Spending in 12 months ($ billion)", "format": ",.0f" }
+        ]
+      }
+    },
+    {
+      "description": "State code inside each circle (not the two smallest)",
+      "data": { "url": "data/dorling_positions.csv" },
+      "transform": [
+        { "filter": "datum.code !== 'NT' && datum.code !== 'ACT'" },
+        {
+          "lookup": "code",
+          "from": { "data": { "url": "data/states.csv" }, "key": "code", "fields": ["growth_pct"] }
+        }
+      ],
+      "mark": { "type": "text", "align": "center", "baseline": "middle", "dy": -5, "fontSize": 11, "fontWeight": "bold" },
+      "encoding": {
+        "x": { "field": "x", "type": "quantitative", "scale": { "domain": [0, 600], "nice": false, "zero": false }, "axis": null },
+        "y": { "field": "y", "type": "quantitative", "scale": { "domain": [492, 0], "nice": false, "zero": false }, "axis": null },
+        "text": { "field": "code" },
+        "color": {
+          "condition": { "test": "datum.growth_pct >= 7.5", "value": "white" },
+          "value": "#222222"
+        }
+      }
+    },
+    {
+      "description": "Growth rate inside each circle, under the code (not the two smallest)",
+      "data": { "url": "data/dorling_positions.csv" },
+      "transform": [
+        { "filter": "datum.code !== 'NT' && datum.code !== 'ACT'" },
+        {
+          "lookup": "code",
+          "from": { "data": { "url": "data/states.csv" }, "key": "code", "fields": ["growth_pct"] }
+        },
+        { "calculate": "format(datum.growth_pct, '.1f') + '%'", "as": "growth_label" }
+      ],
+      "mark": { "type": "text", "align": "center", "baseline": "middle", "dy": 7, "fontSize": 10 },
+      "encoding": {
+        "x": { "field": "x", "type": "quantitative", "scale": { "domain": [0, 600], "nice": false, "zero": false }, "axis": null },
+        "y": { "field": "y", "type": "quantitative", "scale": { "domain": [492, 0], "nice": false, "zero": false }, "axis": null },
+        "text": { "field": "growth_label" },
+        "color": {
+          "condition": { "test": "datum.growth_pct >= 7.5", "value": "white" },
+          "value": "#222222"
+        }
+      }
+    },
+    {
+      "description": "Labels for the two smallest circles (Northern Territory and ACT), just to the right of each circle",
+      "data": { "url": "data/dorling_positions.csv" },
+      "transform": [
+        { "filter": "datum.code === 'NT' || datum.code === 'ACT'" },
+        {
+          "lookup": "code",
+          "from": { "data": { "url": "data/states.csv" }, "key": "code", "fields": ["growth_pct"] }
+        },
+        { "calculate": "datum.code + ' ' + format(datum.growth_pct, '.1f') + '%'", "as": "outside_label" }
+      ],
+      "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 11, "fontWeight": "bold", "color": "#222222" },
+      "encoding": {
+        "x": { "field": "label_x", "type": "quantitative", "scale": { "domain": [0, 600], "nice": false, "zero": false }, "axis": null },
+        "y": { "field": "y", "type": "quantitative", "scale": { "domain": [492, 0], "nice": false, "zero": false }, "axis": null },
+        "text": { "field": "outside_label" }
+      }
+    }
+  ]
+}

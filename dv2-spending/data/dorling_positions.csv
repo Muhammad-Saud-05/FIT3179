@@ -1,9 +1,9 @@
-code,state,x,y
-WA,Western Australia,144.3,255.5
-NT,Northern Territory,303.7,154.3
-SA,South Australia,335.2,325.0
-QLD,Queensland,464.1,208.5
-NSW,New South Wales,501.1,344.6
-VIC,Victoria,417.1,463.8
-TAS,Tasmania,469.9,536.4
-ACT,Australian Capital Territory,502.9,442.4
+code,state,x,y,label_x
+WA,Western Australia,144.3,195.5,196.9
+NT,Northern Territory,303.7,94.3,324.2
+SA,South Australia,335.2,265.0,372.7
+QLD,Queensland,465.3,152.7,527.5
+NSW,New South Wales,490.1,295.6,557.9
+VIC,Victoria,430.8,395.3,487.2
+TAS,Tasmania,459.6,463.5,483.5
+ACT,Australian Capital Territory,503.5,373.5,522.9
