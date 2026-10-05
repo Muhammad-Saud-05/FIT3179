@@ -1,0 +1,273 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 640,
+  "height": { "step": 28 },
+  "padding": { "right": 95 },
+  "title": {
+    "text": [
+      "Housing and health take a bigger share of spending than 30 years ago,",
+      "transport, furnishings and food take a smaller share"
+    ],
+    "subtitle": [
+      "Each category's share of all household spending (current prices): 1995–96 on the left, 2025–26 on the right.",
+      "The right-hand column is the change in percentage points; it can differ by 0.1 from the printed shares because of rounding.",
+      "Shares of dollars spent, not of things bought. Housing includes an estimated rent value for homes people own."
+    ],
+    "offset": 30
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelColor": "#444444",
+      "titleColor": "#444444",
+      "gridColor": "#e8e8e8",
+      "domainColor": "#999999",
+      "tickColor": "#999999"
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "data": { "url": "data/hfce_fy.csv" },
+  "transform": [
+    { "filter": "datum.fy == 1996 || datum.fy == 2026" },
+    { "pivot": "fy", "value": "share_pct", "groupby": ["category"] },
+    { "calculate": "datum['2026'] - datum['1996']", "as": "change" },
+    { "calculate": "-10 - datum['1996']", "as": "left_end" },
+    { "calculate": "10 + datum['2026']", "as": "right_end" },
+    { "calculate": "format(datum['1996'], '.1f') + '%'", "as": "left_text" },
+    { "calculate": "format(datum['2026'], '.1f') + '%'", "as": "right_text" },
+    { "calculate": "(datum.change >= 0 ? '▲ +' : '▼ -') + format(abs(datum.change), '.1f')", "as": "change_text" }
+  ],
+  "layer": [
+    {
+      "description": "Left bars: 1995-96 shares, growing leftwards from the middle gap",
+      "mark": { "type": "bar", "size": 20 },
+      "encoding": {
+        "x": { "field": "left_end", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "x2": { "datum": -10 },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "change", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": null
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Housing & utilities",
+              "Insurance, finance & other",
+              "Transport",
+              "Recreation",
+              "Food",
+              "Eating out & hotels",
+              "Health",
+              "Furnishings",
+              "Education",
+              "Clothing",
+              "Alcohol & tobacco",
+              "Communications"
+            ],
+            "range": [
+              "#7570b3",
+              "#a6761d",
+              "#1f78b4",
+              "#e7298a",
+              "#d95f02",
+              "#a6cee3",
+              "#1b9e77",
+              "#cab2d6",
+              "#e31a1c",
+              "#e6ab02",
+              "#fb9a99",
+              "#66a61e"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "category", "type": "nominal", "title": "Category" },
+          { "field": "1996", "type": "quantitative", "title": "Share in 1995–96 (%)", "format": ".1f" },
+          { "field": "2026", "type": "quantitative", "title": "Share in 2025–26 (%)", "format": ".1f" },
+          { "field": "change", "type": "quantitative", "title": "Change (points)", "format": "+.1f" }
+        ]
+      }
+    },
+    {
+      "description": "Right bars: 2025-26 shares, growing rightwards from the middle gap",
+      "mark": { "type": "bar", "size": 20 },
+      "encoding": {
+        "x": { "field": "right_end", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "x2": { "datum": 10 },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "change", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": null
+        },
+        "color": {
+          "field": "category",
+          "type": "nominal",
+          "scale": {
+            "domain": [
+              "Housing & utilities",
+              "Insurance, finance & other",
+              "Transport",
+              "Recreation",
+              "Food",
+              "Eating out & hotels",
+              "Health",
+              "Furnishings",
+              "Education",
+              "Clothing",
+              "Alcohol & tobacco",
+              "Communications"
+            ],
+            "range": [
+              "#7570b3",
+              "#a6761d",
+              "#1f78b4",
+              "#e7298a",
+              "#d95f02",
+              "#a6cee3",
+              "#1b9e77",
+              "#cab2d6",
+              "#e31a1c",
+              "#e6ab02",
+              "#fb9a99",
+              "#66a61e"
+            ]
+          },
+          "legend": null
+        },
+        "tooltip": [
+          { "field": "category", "type": "nominal", "title": "Category" },
+          { "field": "1996", "type": "quantitative", "title": "Share in 1995–96 (%)", "format": ".1f" },
+          { "field": "2026", "type": "quantitative", "title": "Share in 2025–26 (%)", "format": ".1f" },
+          { "field": "change", "type": "quantitative", "title": "Change (points)", "format": "+.1f" }
+        ]
+      }
+    },
+    {
+      "description": "Category names in the middle gap",
+      "mark": { "type": "text", "align": "center", "baseline": "middle", "fontSize": 12, "color": "#222222" },
+      "encoding": {
+        "x": { "datum": 0, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "change", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": null
+        },
+        "text": { "field": "category" }
+      }
+    },
+    {
+      "description": "Value labels, left",
+      "mark": { "type": "text", "align": "right", "baseline": "middle", "fontSize": 11, "color": "#333333", "dx": -5 },
+      "encoding": {
+        "x": { "field": "left_end", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "change", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": null
+        },
+        "text": { "field": "left_text" }
+      }
+    },
+    {
+      "description": "Value labels, right",
+      "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 11, "color": "#333333", "dx": 5 },
+      "encoding": {
+        "x": { "field": "right_end", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "change", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": null
+        },
+        "text": { "field": "right_text" }
+      }
+    },
+    {
+      "description": "Change column",
+      "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#222222", "fontWeight": "bold" },
+      "encoding": {
+        "x": { "datum": 38.5, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "change", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": null
+        },
+        "text": { "field": "change_text" }
+      }
+    },
+    {
+      "description": "Header over the left bars",
+      "transform": [{ "filter": "datum.category == 'Housing & utilities'" }],
+      "mark": { "type": "text", "align": "center", "baseline": "bottom", "fontSize": 13, "color": "#222222", "fontWeight": "bold", "dy": -22 },
+      "encoding": {
+        "x": { "datum": -22, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "change", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": null
+        },
+        "text": { "value": "1995–96" }
+      }
+    },
+    {
+      "description": "Header over the right bars",
+      "transform": [{ "filter": "datum.category == 'Housing & utilities'" }],
+      "mark": { "type": "text", "align": "center", "baseline": "bottom", "fontSize": 13, "color": "#222222", "fontWeight": "bold", "dy": -22 },
+      "encoding": {
+        "x": { "datum": 22, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "change", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": null
+        },
+        "text": { "value": "2025–26" }
+      }
+    },
+    {
+      "description": "Header over the change column",
+      "transform": [{ "filter": "datum.category == 'Housing & utilities'" }],
+      "mark": { "type": "text", "align": "left", "baseline": "bottom", "fontSize": 13, "color": "#222222", "fontWeight": "bold", "dy": -22 },
+      "encoding": {
+        "x": { "datum": 38.5, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "y": {
+          "field": "category",
+          "type": "nominal",
+          "sort": { "field": "change", "op": "max", "order": "descending" },
+          "title": null,
+          "axis": null
+        },
+        "text": { "value": "Change" }
+      }
+    }
+  ]
+}
