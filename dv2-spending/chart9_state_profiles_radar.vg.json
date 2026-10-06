@@ -2,7 +2,12 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "width": 440,
   "height": 440,
-  "padding": { "left": 125, "right": 125, "top": 10, "bottom": 10 },
+  "padding": {
+    "left": 125,
+    "right": 125,
+    "top": 10,
+    "bottom": 10
+  },
   "title": {
     "text": [
       "The Northern Territory spends the biggest share on eating out,",
@@ -11,12 +16,15 @@
     "subtitle": [
       "How each area splits its spending across nine categories, 12 months to August 2026.",
       "The further out a corner, the bigger that category's share of the area's tracked spending.",
-      "Shares, not dollars. Tracked spending leaves out rent, education, communications, electricity and gas."
+      "Shares, not dollars. Tracked spending leaves out rent, education, communications, electricity and gas.",
+      "Click a dot to focus on one area; double-click to reset."
     ]
   },
   "config": {
     "font": "Arial, Helvetica, sans-serif",
-    "view": { "stroke": null },
+    "view": {
+      "stroke": null
+    },
     "axis": {
       "labelFontSize": 12,
       "titleFontSize": 12,
@@ -41,269 +49,744 @@
       "description": "Grey rings at 5, 10, 15, 20 and 25 per cent",
       "data": {
         "values": [
-          { "k": 0, "ring": 5 },
-          { "k": 1, "ring": 5 },
-          { "k": 2, "ring": 5 },
-          { "k": 3, "ring": 5 },
-          { "k": 4, "ring": 5 },
-          { "k": 5, "ring": 5 },
-          { "k": 6, "ring": 5 },
-          { "k": 7, "ring": 5 },
-          { "k": 8, "ring": 5 },
-          { "k": 0, "ring": 10 },
-          { "k": 1, "ring": 10 },
-          { "k": 2, "ring": 10 },
-          { "k": 3, "ring": 10 },
-          { "k": 4, "ring": 10 },
-          { "k": 5, "ring": 10 },
-          { "k": 6, "ring": 10 },
-          { "k": 7, "ring": 10 },
-          { "k": 8, "ring": 10 },
-          { "k": 0, "ring": 15 },
-          { "k": 1, "ring": 15 },
-          { "k": 2, "ring": 15 },
-          { "k": 3, "ring": 15 },
-          { "k": 4, "ring": 15 },
-          { "k": 5, "ring": 15 },
-          { "k": 6, "ring": 15 },
-          { "k": 7, "ring": 15 },
-          { "k": 8, "ring": 15 },
-          { "k": 0, "ring": 20 },
-          { "k": 1, "ring": 20 },
-          { "k": 2, "ring": 20 },
-          { "k": 3, "ring": 20 },
-          { "k": 4, "ring": 20 },
-          { "k": 5, "ring": 20 },
-          { "k": 6, "ring": 20 },
-          { "k": 7, "ring": 20 },
-          { "k": 8, "ring": 20 },
-          { "k": 0, "ring": 25 },
-          { "k": 1, "ring": 25 },
-          { "k": 2, "ring": 25 },
-          { "k": 3, "ring": 25 },
-          { "k": 4, "ring": 25 },
-          { "k": 5, "ring": 25 },
-          { "k": 6, "ring": 25 },
-          { "k": 7, "ring": 25 },
-          { "k": 8, "ring": 25 }
+          {
+            "k": 0,
+            "ring": 5
+          },
+          {
+            "k": 1,
+            "ring": 5
+          },
+          {
+            "k": 2,
+            "ring": 5
+          },
+          {
+            "k": 3,
+            "ring": 5
+          },
+          {
+            "k": 4,
+            "ring": 5
+          },
+          {
+            "k": 5,
+            "ring": 5
+          },
+          {
+            "k": 6,
+            "ring": 5
+          },
+          {
+            "k": 7,
+            "ring": 5
+          },
+          {
+            "k": 8,
+            "ring": 5
+          },
+          {
+            "k": 0,
+            "ring": 10
+          },
+          {
+            "k": 1,
+            "ring": 10
+          },
+          {
+            "k": 2,
+            "ring": 10
+          },
+          {
+            "k": 3,
+            "ring": 10
+          },
+          {
+            "k": 4,
+            "ring": 10
+          },
+          {
+            "k": 5,
+            "ring": 10
+          },
+          {
+            "k": 6,
+            "ring": 10
+          },
+          {
+            "k": 7,
+            "ring": 10
+          },
+          {
+            "k": 8,
+            "ring": 10
+          },
+          {
+            "k": 0,
+            "ring": 15
+          },
+          {
+            "k": 1,
+            "ring": 15
+          },
+          {
+            "k": 2,
+            "ring": 15
+          },
+          {
+            "k": 3,
+            "ring": 15
+          },
+          {
+            "k": 4,
+            "ring": 15
+          },
+          {
+            "k": 5,
+            "ring": 15
+          },
+          {
+            "k": 6,
+            "ring": 15
+          },
+          {
+            "k": 7,
+            "ring": 15
+          },
+          {
+            "k": 8,
+            "ring": 15
+          },
+          {
+            "k": 0,
+            "ring": 20
+          },
+          {
+            "k": 1,
+            "ring": 20
+          },
+          {
+            "k": 2,
+            "ring": 20
+          },
+          {
+            "k": 3,
+            "ring": 20
+          },
+          {
+            "k": 4,
+            "ring": 20
+          },
+          {
+            "k": 5,
+            "ring": 20
+          },
+          {
+            "k": 6,
+            "ring": 20
+          },
+          {
+            "k": 7,
+            "ring": 20
+          },
+          {
+            "k": 8,
+            "ring": 20
+          },
+          {
+            "k": 0,
+            "ring": 25
+          },
+          {
+            "k": 1,
+            "ring": 25
+          },
+          {
+            "k": 2,
+            "ring": 25
+          },
+          {
+            "k": 3,
+            "ring": 25
+          },
+          {
+            "k": 4,
+            "ring": 25
+          },
+          {
+            "k": 5,
+            "ring": 25
+          },
+          {
+            "k": 6,
+            "ring": 25
+          },
+          {
+            "k": 7,
+            "ring": 25
+          },
+          {
+            "k": 8,
+            "ring": 25
+          }
         ]
       },
       "transform": [
-        { "calculate": "datum.ring * sin(datum.k * 2 * PI / 9)", "as": "gx" },
-        { "calculate": "datum.ring * cos(datum.k * 2 * PI / 9)", "as": "gy" }
+        {
+          "calculate": "datum.ring * sin(datum.k * 2 * PI / 9)",
+          "as": "gx"
+        },
+        {
+          "calculate": "datum.ring * cos(datum.k * 2 * PI / 9)",
+          "as": "gy"
+        }
       ],
-      "mark": { "type": "line", "interpolate": "linear-closed", "color": "#d9d9d9", "strokeWidth": 1 },
+      "mark": {
+        "type": "line",
+        "interpolate": "linear-closed",
+        "color": "#d9d9d9",
+        "strokeWidth": 1
+      },
       "encoding": {
         "x": {
           "field": "gx",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "y": {
           "field": "gy",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
-        "detail": { "field": "ring", "type": "nominal" },
-        "order": { "field": "k", "type": "quantitative" }
+        "detail": {
+          "field": "ring",
+          "type": "nominal"
+        },
+        "order": {
+          "field": "k",
+          "type": "quantitative"
+        }
       }
     },
     {
       "description": "One spoke per category, from the centre to the 25 per cent ring",
       "data": {
         "values": [
-          { "k": 0, "ring": 0 },
-          { "k": 0, "ring": 25 },
-          { "k": 1, "ring": 0 },
-          { "k": 1, "ring": 25 },
-          { "k": 2, "ring": 0 },
-          { "k": 2, "ring": 25 },
-          { "k": 3, "ring": 0 },
-          { "k": 3, "ring": 25 },
-          { "k": 4, "ring": 0 },
-          { "k": 4, "ring": 25 },
-          { "k": 5, "ring": 0 },
-          { "k": 5, "ring": 25 },
-          { "k": 6, "ring": 0 },
-          { "k": 6, "ring": 25 },
-          { "k": 7, "ring": 0 },
-          { "k": 7, "ring": 25 },
-          { "k": 8, "ring": 0 },
-          { "k": 8, "ring": 25 }
+          {
+            "k": 0,
+            "ring": 0
+          },
+          {
+            "k": 0,
+            "ring": 25
+          },
+          {
+            "k": 1,
+            "ring": 0
+          },
+          {
+            "k": 1,
+            "ring": 25
+          },
+          {
+            "k": 2,
+            "ring": 0
+          },
+          {
+            "k": 2,
+            "ring": 25
+          },
+          {
+            "k": 3,
+            "ring": 0
+          },
+          {
+            "k": 3,
+            "ring": 25
+          },
+          {
+            "k": 4,
+            "ring": 0
+          },
+          {
+            "k": 4,
+            "ring": 25
+          },
+          {
+            "k": 5,
+            "ring": 0
+          },
+          {
+            "k": 5,
+            "ring": 25
+          },
+          {
+            "k": 6,
+            "ring": 0
+          },
+          {
+            "k": 6,
+            "ring": 25
+          },
+          {
+            "k": 7,
+            "ring": 0
+          },
+          {
+            "k": 7,
+            "ring": 25
+          },
+          {
+            "k": 8,
+            "ring": 0
+          },
+          {
+            "k": 8,
+            "ring": 25
+          }
         ]
       },
       "transform": [
-        { "calculate": "datum.ring * sin(datum.k * 2 * PI / 9)", "as": "gx" },
-        { "calculate": "datum.ring * cos(datum.k * 2 * PI / 9)", "as": "gy" }
+        {
+          "calculate": "datum.ring * sin(datum.k * 2 * PI / 9)",
+          "as": "gx"
+        },
+        {
+          "calculate": "datum.ring * cos(datum.k * 2 * PI / 9)",
+          "as": "gy"
+        }
       ],
-      "mark": { "type": "line", "color": "#d9d9d9", "strokeWidth": 1 },
+      "mark": {
+        "type": "line",
+        "color": "#d9d9d9",
+        "strokeWidth": 1
+      },
       "encoding": {
         "x": {
           "field": "gx",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "y": {
           "field": "gy",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
-        "detail": { "field": "k", "type": "nominal" },
-        "order": { "field": "ring", "type": "quantitative" }
+        "detail": {
+          "field": "k",
+          "type": "nominal"
+        },
+        "order": {
+          "field": "ring",
+          "type": "quantitative"
+        }
       }
     },
     {
       "description": "Ring values written downwards from the centre, between two spokes",
       "data": {
         "values": [
-          { "ring": 5, "ring_label": "5%", "k": 0 },
-          { "ring": 10, "ring_label": "10%", "k": 0 },
-          { "ring": 15, "ring_label": "15%", "k": 0 },
-          { "ring": 20, "ring_label": "20%", "k": 0 },
-          { "ring": 25, "ring_label": "25%", "k": 0 }
+          {
+            "ring": 5,
+            "ring_label": "5%",
+            "k": 0
+          },
+          {
+            "ring": 10,
+            "ring_label": "10%",
+            "k": 0
+          },
+          {
+            "ring": 15,
+            "ring_label": "15%",
+            "k": 0
+          },
+          {
+            "ring": 20,
+            "ring_label": "20%",
+            "k": 0
+          },
+          {
+            "ring": 25,
+            "ring_label": "25%",
+            "k": 0
+          }
         ]
       },
       "transform": [
-        { "calculate": "datum.ring * sin(datum.k * 2 * PI / 9)", "as": "gx" },
-        { "calculate": "-datum.ring", "as": "ring_y" }
+        {
+          "calculate": "datum.ring * sin(datum.k * 2 * PI / 9)",
+          "as": "gx"
+        },
+        {
+          "calculate": "-datum.ring",
+          "as": "ring_y"
+        }
       ],
-      "mark": { "type": "text", "align": "center", "baseline": "middle", "fontSize": 10, "color": "#777777" },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "middle",
+        "fontSize": 10,
+        "color": "#777777"
+      },
       "encoding": {
         "x": {
           "field": "gx",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "y": {
           "field": "ring_y",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
-        "text": { "field": "ring_label", "type": "nominal" }
+        "text": {
+          "field": "ring_label",
+          "type": "nominal"
+        }
       }
     },
     {
       "description": "Top label",
       "data": {
         "values": [
-          { "k": 0, "axis_name": "Food" },
-          { "k": 1, "axis_name": "Health" },
-          { "k": 2, "axis_name": "Transport" },
-          { "k": 3, "axis_name": "Furnishings" },
-          { "k": 4, "axis_name": "Clothing" },
-          { "k": 5, "axis_name": "Miscellaneous" },
-          { "k": 6, "axis_name": "Alcohol & tobacco" },
-          { "k": 7, "axis_name": "Recreation" },
-          { "k": 8, "axis_name": "Eating out" }
+          {
+            "k": 0,
+            "axis_name": "Food"
+          },
+          {
+            "k": 1,
+            "axis_name": "Health"
+          },
+          {
+            "k": 2,
+            "axis_name": "Transport"
+          },
+          {
+            "k": 3,
+            "axis_name": "Furnishings"
+          },
+          {
+            "k": 4,
+            "axis_name": "Clothing"
+          },
+          {
+            "k": 5,
+            "axis_name": "Miscellaneous"
+          },
+          {
+            "k": 6,
+            "axis_name": "Alcohol & tobacco"
+          },
+          {
+            "k": 7,
+            "axis_name": "Recreation"
+          },
+          {
+            "k": 8,
+            "axis_name": "Eating out"
+          }
         ]
       },
       "transform": [
-        { "calculate": "28.6 * sin(datum.k * 2 * PI / 9)", "as": "lx" },
-        { "calculate": "28.6 * cos(datum.k * 2 * PI / 9)", "as": "ly" },
-        { "filter": "datum.k == 0" }
+        {
+          "calculate": "28.6 * sin(datum.k * 2 * PI / 9)",
+          "as": "lx"
+        },
+        {
+          "calculate": "28.6 * cos(datum.k * 2 * PI / 9)",
+          "as": "ly"
+        },
+        {
+          "filter": "datum.k == 0"
+        }
       ],
-      "mark": { "type": "text", "align": "center", "baseline": "bottom", "fontSize": 12, "color": "#222222" },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "fontSize": 12,
+        "color": "#222222"
+      },
       "encoding": {
         "x": {
           "field": "lx",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "y": {
           "field": "ly",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
-        "text": { "field": "axis_name", "type": "nominal" }
+        "text": {
+          "field": "axis_name",
+          "type": "nominal"
+        }
       }
     },
     {
       "description": "Labels on the right side",
       "data": {
         "values": [
-          { "k": 0, "axis_name": "Food" },
-          { "k": 1, "axis_name": "Health" },
-          { "k": 2, "axis_name": "Transport" },
-          { "k": 3, "axis_name": "Furnishings" },
-          { "k": 4, "axis_name": "Clothing" },
-          { "k": 5, "axis_name": "Miscellaneous" },
-          { "k": 6, "axis_name": "Alcohol & tobacco" },
-          { "k": 7, "axis_name": "Recreation" },
-          { "k": 8, "axis_name": "Eating out" }
+          {
+            "k": 0,
+            "axis_name": "Food"
+          },
+          {
+            "k": 1,
+            "axis_name": "Health"
+          },
+          {
+            "k": 2,
+            "axis_name": "Transport"
+          },
+          {
+            "k": 3,
+            "axis_name": "Furnishings"
+          },
+          {
+            "k": 4,
+            "axis_name": "Clothing"
+          },
+          {
+            "k": 5,
+            "axis_name": "Miscellaneous"
+          },
+          {
+            "k": 6,
+            "axis_name": "Alcohol & tobacco"
+          },
+          {
+            "k": 7,
+            "axis_name": "Recreation"
+          },
+          {
+            "k": 8,
+            "axis_name": "Eating out"
+          }
         ]
       },
       "transform": [
-        { "calculate": "28.6 * sin(datum.k * 2 * PI / 9)", "as": "lx" },
-        { "calculate": "28.6 * cos(datum.k * 2 * PI / 9)", "as": "ly" },
-        { "filter": "datum.k >= 1 && datum.k <= 4" }
+        {
+          "calculate": "28.6 * sin(datum.k * 2 * PI / 9)",
+          "as": "lx"
+        },
+        {
+          "calculate": "28.6 * cos(datum.k * 2 * PI / 9)",
+          "as": "ly"
+        },
+        {
+          "filter": "datum.k >= 1 && datum.k <= 4"
+        }
       ],
-      "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#222222", "dx": 5 },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "fontSize": 12,
+        "color": "#222222",
+        "dx": 5
+      },
       "encoding": {
         "x": {
           "field": "lx",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "y": {
           "field": "ly",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
-        "text": { "field": "axis_name", "type": "nominal" }
+        "text": {
+          "field": "axis_name",
+          "type": "nominal"
+        }
       }
     },
     {
       "description": "Labels on the left side",
       "data": {
         "values": [
-          { "k": 0, "axis_name": "Food" },
-          { "k": 1, "axis_name": "Health" },
-          { "k": 2, "axis_name": "Transport" },
-          { "k": 3, "axis_name": "Furnishings" },
-          { "k": 4, "axis_name": "Clothing" },
-          { "k": 5, "axis_name": "Miscellaneous" },
-          { "k": 6, "axis_name": "Alcohol & tobacco" },
-          { "k": 7, "axis_name": "Recreation" },
-          { "k": 8, "axis_name": "Eating out" }
+          {
+            "k": 0,
+            "axis_name": "Food"
+          },
+          {
+            "k": 1,
+            "axis_name": "Health"
+          },
+          {
+            "k": 2,
+            "axis_name": "Transport"
+          },
+          {
+            "k": 3,
+            "axis_name": "Furnishings"
+          },
+          {
+            "k": 4,
+            "axis_name": "Clothing"
+          },
+          {
+            "k": 5,
+            "axis_name": "Miscellaneous"
+          },
+          {
+            "k": 6,
+            "axis_name": "Alcohol & tobacco"
+          },
+          {
+            "k": 7,
+            "axis_name": "Recreation"
+          },
+          {
+            "k": 8,
+            "axis_name": "Eating out"
+          }
         ]
       },
       "transform": [
-        { "calculate": "28.6 * sin(datum.k * 2 * PI / 9)", "as": "lx" },
-        { "calculate": "28.6 * cos(datum.k * 2 * PI / 9)", "as": "ly" },
-        { "filter": "datum.k >= 5" }
+        {
+          "calculate": "28.6 * sin(datum.k * 2 * PI / 9)",
+          "as": "lx"
+        },
+        {
+          "calculate": "28.6 * cos(datum.k * 2 * PI / 9)",
+          "as": "ly"
+        },
+        {
+          "filter": "datum.k >= 5"
+        }
       ],
-      "mark": { "type": "text", "align": "right", "baseline": "middle", "fontSize": 12, "color": "#222222", "dx": -5 },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "fontSize": 12,
+        "color": "#222222",
+        "dx": -5
+      },
       "encoding": {
         "x": {
           "field": "lx",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "y": {
           "field": "ly",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
-        "text": { "field": "axis_name", "type": "nominal" }
+        "text": {
+          "field": "axis_name",
+          "type": "nominal"
+        }
       }
     },
     {
       "description": "Closed shapes for the three states",
-      "data": { "url": "data/states.csv" },
+      "data": {
+        "url": "data/states.csv"
+      },
       "transform": [
-        { "filter": { "field": "code", "oneOf": ["NT", "WA", "VIC", "AUS"] } },
+        {
+          "filter": {
+            "field": "code",
+            "oneOf": [
+              "NT",
+              "WA",
+              "VIC",
+              "AUS"
+            ]
+          }
+        },
         {
           "fold": [
             "share_Food",
@@ -316,58 +799,130 @@
             "share_Recreation",
             "share_Eating out"
           ],
-          "as": ["measure", "share"]
+          "as": [
+            "measure",
+            "share"
+          ]
         },
         {
           "lookup": "measure",
           "from": {
             "data": {
               "values": [
-                { "measure": "share_Food", "k": 0 },
-                { "measure": "share_Health", "k": 1 },
-                { "measure": "share_Transport", "k": 2 },
-                { "measure": "share_Furnishings", "k": 3 },
-                { "measure": "share_Clothing", "k": 4 },
-                { "measure": "share_Miscellaneous", "k": 5 },
-                { "measure": "share_Alcohol & tobacco", "k": 6 },
-                { "measure": "share_Recreation", "k": 7 },
-                { "measure": "share_Eating out", "k": 8 }
+                {
+                  "measure": "share_Food",
+                  "k": 0
+                },
+                {
+                  "measure": "share_Health",
+                  "k": 1
+                },
+                {
+                  "measure": "share_Transport",
+                  "k": 2
+                },
+                {
+                  "measure": "share_Furnishings",
+                  "k": 3
+                },
+                {
+                  "measure": "share_Clothing",
+                  "k": 4
+                },
+                {
+                  "measure": "share_Miscellaneous",
+                  "k": 5
+                },
+                {
+                  "measure": "share_Alcohol & tobacco",
+                  "k": 6
+                },
+                {
+                  "measure": "share_Recreation",
+                  "k": 7
+                },
+                {
+                  "measure": "share_Eating out",
+                  "k": 8
+                }
               ]
             },
             "key": "measure",
-            "fields": ["k"]
+            "fields": [
+              "k"
+            ]
           }
         },
-        { "calculate": "datum.share * sin(datum.k * 2 * PI / 9)", "as": "px" },
-        { "calculate": "datum.share * cos(datum.k * 2 * PI / 9)", "as": "py" },
+        {
+          "calculate": "datum.share * sin(datum.k * 2 * PI / 9)",
+          "as": "px"
+        },
+        {
+          "calculate": "datum.share * cos(datum.k * 2 * PI / 9)",
+          "as": "py"
+        },
         {
           "calculate": "datum.code == 'NT' ? 'Northern Territory' : datum.code == 'WA' ? 'Western Australia' : datum.code == 'VIC' ? 'Victoria' : 'Australia (average)'",
           "as": "area"
         },
-        { "calculate": "replace(datum.measure, 'share_', '')", "as": "category" },
-        { "filter": "datum.code != 'AUS'" }
+        {
+          "calculate": "replace(datum.measure, 'share_', '')",
+          "as": "category"
+        },
+        {
+          "filter": "datum.code != 'AUS'"
+        }
       ],
-      "mark": { "type": "line", "interpolate": "linear-closed", "strokeWidth": 2.5 },
+      "mark": {
+        "type": "line",
+        "interpolate": "linear-closed",
+        "strokeWidth": 2.5
+      },
       "encoding": {
         "x": {
           "field": "px",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "y": {
           "field": "py",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
-        "order": { "field": "k", "type": "quantitative" },
+        "order": {
+          "field": "k",
+          "type": "quantitative"
+        },
         "color": {
           "field": "area",
           "type": "nominal",
           "scale": {
-            "domain": ["Northern Territory", "Western Australia", "Victoria", "Australia (average)"],
-            "range": ["#851025", "#228893", "#313499", "#333333"]
+            "domain": [
+              "Northern Territory",
+              "Western Australia",
+              "Victoria",
+              "Australia (average)"
+            ],
+            "range": [
+              "#851025",
+              "#228893",
+              "#313499",
+              "#333333"
+            ]
           },
           "legend": {
             "orient": "bottom",
@@ -377,14 +932,33 @@
             "symbolSize": 200,
             "labelFontSize": 12
           }
+        },
+        "opacity": {
+          "condition": {
+            "param": "pick_area",
+            "value": 1
+          },
+          "value": 0.15
         }
       }
     },
     {
       "description": "Dashed closed shape for the national average",
-      "data": { "url": "data/states.csv" },
+      "data": {
+        "url": "data/states.csv"
+      },
       "transform": [
-        { "filter": { "field": "code", "oneOf": ["NT", "WA", "VIC", "AUS"] } },
+        {
+          "filter": {
+            "field": "code",
+            "oneOf": [
+              "NT",
+              "WA",
+              "VIC",
+              "AUS"
+            ]
+          }
+        },
         {
           "fold": [
             "share_Food",
@@ -397,58 +971,134 @@
             "share_Recreation",
             "share_Eating out"
           ],
-          "as": ["measure", "share"]
+          "as": [
+            "measure",
+            "share"
+          ]
         },
         {
           "lookup": "measure",
           "from": {
             "data": {
               "values": [
-                { "measure": "share_Food", "k": 0 },
-                { "measure": "share_Health", "k": 1 },
-                { "measure": "share_Transport", "k": 2 },
-                { "measure": "share_Furnishings", "k": 3 },
-                { "measure": "share_Clothing", "k": 4 },
-                { "measure": "share_Miscellaneous", "k": 5 },
-                { "measure": "share_Alcohol & tobacco", "k": 6 },
-                { "measure": "share_Recreation", "k": 7 },
-                { "measure": "share_Eating out", "k": 8 }
+                {
+                  "measure": "share_Food",
+                  "k": 0
+                },
+                {
+                  "measure": "share_Health",
+                  "k": 1
+                },
+                {
+                  "measure": "share_Transport",
+                  "k": 2
+                },
+                {
+                  "measure": "share_Furnishings",
+                  "k": 3
+                },
+                {
+                  "measure": "share_Clothing",
+                  "k": 4
+                },
+                {
+                  "measure": "share_Miscellaneous",
+                  "k": 5
+                },
+                {
+                  "measure": "share_Alcohol & tobacco",
+                  "k": 6
+                },
+                {
+                  "measure": "share_Recreation",
+                  "k": 7
+                },
+                {
+                  "measure": "share_Eating out",
+                  "k": 8
+                }
               ]
             },
             "key": "measure",
-            "fields": ["k"]
+            "fields": [
+              "k"
+            ]
           }
         },
-        { "calculate": "datum.share * sin(datum.k * 2 * PI / 9)", "as": "px" },
-        { "calculate": "datum.share * cos(datum.k * 2 * PI / 9)", "as": "py" },
+        {
+          "calculate": "datum.share * sin(datum.k * 2 * PI / 9)",
+          "as": "px"
+        },
+        {
+          "calculate": "datum.share * cos(datum.k * 2 * PI / 9)",
+          "as": "py"
+        },
         {
           "calculate": "datum.code == 'NT' ? 'Northern Territory' : datum.code == 'WA' ? 'Western Australia' : datum.code == 'VIC' ? 'Victoria' : 'Australia (average)'",
           "as": "area"
         },
-        { "calculate": "replace(datum.measure, 'share_', '')", "as": "category" },
-        { "filter": "datum.code == 'AUS'" }
+        {
+          "calculate": "replace(datum.measure, 'share_', '')",
+          "as": "category"
+        },
+        {
+          "filter": "datum.code == 'AUS'"
+        }
       ],
-      "mark": { "type": "line", "interpolate": "linear-closed", "strokeWidth": 2.5, "strokeDash": [6, 4] },
+      "mark": {
+        "type": "line",
+        "interpolate": "linear-closed",
+        "strokeWidth": 2.5,
+        "strokeDash": [
+          6,
+          4
+        ]
+      },
       "encoding": {
         "x": {
           "field": "px",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "y": {
           "field": "py",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
-        "order": { "field": "k", "type": "quantitative" },
+        "order": {
+          "field": "k",
+          "type": "quantitative"
+        },
         "color": {
           "field": "area",
           "type": "nominal",
           "scale": {
-            "domain": ["Northern Territory", "Western Australia", "Victoria", "Australia (average)"],
-            "range": ["#851025", "#228893", "#313499", "#333333"]
+            "domain": [
+              "Northern Territory",
+              "Western Australia",
+              "Victoria",
+              "Australia (average)"
+            ],
+            "range": [
+              "#851025",
+              "#228893",
+              "#313499",
+              "#333333"
+            ]
           },
           "legend": null
         }
@@ -456,9 +1106,21 @@
     },
     {
       "description": "Dots on every corner, which carry the tooltip",
-      "data": { "url": "data/states.csv" },
+      "data": {
+        "url": "data/states.csv"
+      },
       "transform": [
-        { "filter": { "field": "code", "oneOf": ["NT", "WA", "VIC", "AUS"] } },
+        {
+          "filter": {
+            "field": "code",
+            "oneOf": [
+              "NT",
+              "WA",
+              "VIC",
+              "AUS"
+            ]
+          }
+        },
         {
           "fold": [
             "share_Food",
@@ -471,70 +1133,168 @@
             "share_Recreation",
             "share_Eating out"
           ],
-          "as": ["measure", "share"]
+          "as": [
+            "measure",
+            "share"
+          ]
         },
         {
           "lookup": "measure",
           "from": {
             "data": {
               "values": [
-                { "measure": "share_Food", "k": 0 },
-                { "measure": "share_Health", "k": 1 },
-                { "measure": "share_Transport", "k": 2 },
-                { "measure": "share_Furnishings", "k": 3 },
-                { "measure": "share_Clothing", "k": 4 },
-                { "measure": "share_Miscellaneous", "k": 5 },
-                { "measure": "share_Alcohol & tobacco", "k": 6 },
-                { "measure": "share_Recreation", "k": 7 },
-                { "measure": "share_Eating out", "k": 8 }
+                {
+                  "measure": "share_Food",
+                  "k": 0
+                },
+                {
+                  "measure": "share_Health",
+                  "k": 1
+                },
+                {
+                  "measure": "share_Transport",
+                  "k": 2
+                },
+                {
+                  "measure": "share_Furnishings",
+                  "k": 3
+                },
+                {
+                  "measure": "share_Clothing",
+                  "k": 4
+                },
+                {
+                  "measure": "share_Miscellaneous",
+                  "k": 5
+                },
+                {
+                  "measure": "share_Alcohol & tobacco",
+                  "k": 6
+                },
+                {
+                  "measure": "share_Recreation",
+                  "k": 7
+                },
+                {
+                  "measure": "share_Eating out",
+                  "k": 8
+                }
               ]
             },
             "key": "measure",
-            "fields": ["k"]
+            "fields": [
+              "k"
+            ]
           }
         },
-        { "calculate": "datum.share * sin(datum.k * 2 * PI / 9)", "as": "px" },
-        { "calculate": "datum.share * cos(datum.k * 2 * PI / 9)", "as": "py" },
+        {
+          "calculate": "datum.share * sin(datum.k * 2 * PI / 9)",
+          "as": "px"
+        },
+        {
+          "calculate": "datum.share * cos(datum.k * 2 * PI / 9)",
+          "as": "py"
+        },
         {
           "calculate": "datum.code == 'NT' ? 'Northern Territory' : datum.code == 'WA' ? 'Western Australia' : datum.code == 'VIC' ? 'Victoria' : 'Australia (average)'",
           "as": "area"
         },
-        { "calculate": "replace(datum.measure, 'share_', '')", "as": "category" }
+        {
+          "calculate": "replace(datum.measure, 'share_', '')",
+          "as": "category"
+        }
       ],
-      "mark": { "type": "circle", "size": 55, "opacity": 1 },
+      "mark": {
+        "type": "circle",
+        "size": 55
+      },
       "encoding": {
         "x": {
           "field": "px",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "y": {
           "field": "py",
           "type": "quantitative",
-          "scale": { "domain": [-27, 27], "nice": false },
+          "scale": {
+            "domain": [
+              -27,
+              27
+            ],
+            "nice": false
+          },
           "axis": null
         },
         "color": {
           "field": "area",
           "type": "nominal",
           "scale": {
-            "domain": ["Northern Territory", "Western Australia", "Victoria", "Australia (average)"],
-            "range": ["#851025", "#228893", "#313499", "#333333"]
+            "domain": [
+              "Northern Territory",
+              "Western Australia",
+              "Victoria",
+              "Australia (average)"
+            ],
+            "range": [
+              "#851025",
+              "#228893",
+              "#313499",
+              "#333333"
+            ]
           },
           "legend": null
         },
         "tooltip": [
-          { "field": "area", "type": "nominal", "title": "Area" },
-          { "field": "category", "type": "nominal", "title": "Category" },
+          {
+            "field": "area",
+            "type": "nominal",
+            "title": "Area"
+          },
+          {
+            "field": "category",
+            "type": "nominal",
+            "title": "Category"
+          },
           {
             "field": "share",
             "type": "quantitative",
             "title": "Share of tracked spending (%)",
             "format": ".1f"
           }
-        ]
-      }
+        ],
+        "opacity": {
+          "condition": [
+            {
+              "param": "pick_area",
+              "value": 1
+            },
+            {
+              "test": "datum.code === 'AUS'",
+              "value": 1
+            }
+          ],
+          "value": 0.15
+        }
+      },
+      "params": [
+        {
+          "name": "pick_area",
+          "select": {
+            "type": "point",
+            "fields": [
+              "area"
+            ]
+          }
+        }
+      ]
     }
   ]
 }
