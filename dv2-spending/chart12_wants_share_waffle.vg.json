@@ -1,0 +1,114 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": [
+      "About 65 cents of every tracked dollar go on wants,",
+      "little changed since 2013"
+    ],
+    "subtitle": [
+      "Wants are spending people can choose to cut back on; needs are the rest.",
+      "The ABS decides which items count as which. Each panel covers 12 months.",
+      "Tracked spending leaves out rent, education, communications, electricity and gas."
+    ],
+    "offset": 16
+  },
+  "config": {
+    "font": "Arial, Helvetica, sans-serif",
+    "view": { "stroke": null },
+    "axis": {
+      "labelFontSize": 12,
+      "titleFontSize": 12,
+      "titleFontWeight": "normal",
+      "labelColor": "#444444",
+      "titleColor": "#444444",
+      "gridColor": "#e8e8e8",
+      "domainColor": "#999999",
+      "tickColor": "#999999"
+    },
+    "title": {
+      "anchor": "start",
+      "fontSize": 18,
+      "subtitleFontSize": 12,
+      "subtitleColor": "#555555",
+      "subtitlePadding": 6,
+      "offset": 14
+    }
+  },
+  "data": { "url": "data/waffle_split.csv" },
+  "transform": [
+    { "calculate": "sequence(100)", "as": "cell" },
+    { "flatten": ["cell"] },
+    { "calculate": "floor(datum.cell / 10)", "as": "row" },
+    { "calculate": "datum.cell % 10", "as": "col" },
+    {
+      "calculate": "datum.cell < round(datum.discretionary_pct) ? 'Wants (discretionary)' : 'Needs (non-discretionary)'",
+      "as": "group"
+    },
+    {
+      "calculate": "datum.panel_label + ': ' + format(datum.discretionary_pct, '.1f') + '% wants'",
+      "as": "header"
+    }
+  ],
+  "facet": {
+    "column": {
+      "field": "header",
+      "type": "nominal",
+      "title": null,
+      "header": {
+        "labelFontSize": 13,
+        "labelFontWeight": "bold",
+        "labelColor": "#222222",
+        "labelPadding": 10,
+        "labelOrient": "top"
+      }
+    }
+  },
+  "spec": {
+    "width": 230,
+    "height": 230,
+    "mark": { "type": "rect", "stroke": "#ffffff", "strokeWidth": 2 },
+    "encoding": {
+      "x": { "field": "col", "type": "ordinal", "axis": null },
+      "y": { "field": "row", "type": "ordinal", "sort": "descending", "axis": null },
+      "color": {
+        "field": "group",
+        "type": "nominal",
+        "title": "Each square is 1% of tracked spending",
+        "scale": {
+          "domain": ["Wants (discretionary)", "Needs (non-discretionary)"],
+          "range": ["#704c3d", "#e6d3c9"]
+        },
+        "legend": {
+          "orient": "bottom",
+          "direction": "horizontal",
+          "symbolType": "square",
+          "symbolSize": 200,
+          "titleFontSize": 12,
+          "labelFontSize": 12
+        }
+      },
+      "tooltip": [
+        { "field": "panel_label", "type": "nominal", "title": "Period" },
+        {
+          "field": "discretionary_pct",
+          "type": "quantitative",
+          "title": "Wants share (%)",
+          "format": ".1f"
+        },
+        {
+          "field": "discretionary_m",
+          "type": "quantitative",
+          "title": "Wants ($ million)",
+          "format": ",.0f"
+        },
+        {
+          "field": "non_discretionary_m",
+          "type": "quantitative",
+          "title": "Needs ($ million)",
+          "format": ",.0f"
+        }
+      ]
+    }
+  },
+  "spacing": 110
+}
