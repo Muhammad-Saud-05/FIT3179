@@ -1,3 +1,5 @@
+// Same pattern as the course guide (Section 1.3, Step 2):
+// one variable per chart file, then vegaEmbed puts it into the div with the matching id.
 var vg_1 = "chart1_total_spending_line.vg.json";
 var vg_2 = "chart2_spending_shares_radial.vg.json";
 var vg_3 = "chart3_category_rank_bump.vg.json";
@@ -8,7 +10,7 @@ var vg_7 = "chart7_spending_symbol_map.vg.json";
 var vg_8 = "chart8_dollars_added_dorling.vg.json";
 var vg_9 = "chart9_state_profiles_radar.vg.json";
 var vg_10 = "chart10_share_change_butterfly.vg.json";
-var vg_11 = "chart11_category_growth_lollipop.vg.json";
+var vg_11 = "chart11_december_effect_lollipop.vg.json";
 var vg_12 = "chart12_wants_share_waffle.vg.json";
 
 var embed_options = { actions: false };
