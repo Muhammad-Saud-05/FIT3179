@@ -76,7 +76,7 @@
         "title": "Each square is 1% of tracked spending",
         "scale": {
           "domain": ["Wants (discretionary)", "Needs (non-discretionary)"],
-          "range": ["#704c3d", "#e6d3c9"]
+          "range": ["#4d4d4d", "#d9d9d9"]
         },
         "legend": {
           "orient": "bottom",

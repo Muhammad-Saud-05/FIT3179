@@ -87,7 +87,7 @@
               "Up 20% to 40%",
               "Up 40% or more"
             ],
-            "range": ["#a54793", "#cf79bc", "#eeb6e0", "#ebebe6", "#becd99", "#869f53", "#5a732a"]
+            "range": ["#ececec", "#d2d2d2", "#b5b5b5", "#929292", "#6e6e6e", "#454545", "#1c1c1c"]
           },
           "legend": {
             "orient": "bottom",

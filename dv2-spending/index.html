@@ -1,29 +1,263 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-AU">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Where does the money go? Consumer spending in Australia</title>
+<meta name="description" content="Twelve charts and maps that follow where Australian households spend their money, how that has shifted over 30 years, and how it differs from state to state.">
+
+<!-- Typefaces: Fraunces (headings) and Source Sans 3 (text and charts), both from Google Fonts -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+
 <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
 <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
-<script src="vega_lite_vis.js"></script>
-<title>Where does the money go? (test page)</title>
+<script src="vega_lite_vis.js" defer></script>
 </head>
 <body>
-<h1>Test page: all 12 charts</h1>
-<p>This page only checks that the charts load. The real layout and text come later.</p>
-<div id="chart1"></div>
-<div id="chart2"></div>
-<div id="chart3"></div>
-<div id="chart4"></div>
-<div id="chart5"></div>
-<div id="chart6"></div>
-<div id="chart7"></div>
-<div id="chart8"></div>
-<div id="chart9"></div>
-<div id="chart10"></div>
-<div id="chart11"></div>
-<div id="chart12"></div>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="kicker">Consumer spending in Australia</p>
+    <h1>Where does the money go?</h1>
+    <div class="hero-intro grid3">
+      <p class="standfirst">Australian households now spend about $82 billion a month on the goods and services the Australian Bureau of Statistics (ABS) tracks, nearly double 2012. Twelve charts follow where it goes, how that has shifted over 30 years, how it differs from state to state, and what has stayed surprisingly steady.</p>
+
+      <ol class="story-map" aria-label="The four parts of this page">
+        <li>The big picture</li>
+        <li>Composition over time</li>
+        <li>Across Australia</li>
+        <li>Shifting priorities</li>
+      </ol>
+    </div>
+
+    <ul class="hero-stats grid3">
+      <li><span class="stat-number">$82bn</span><span class="stat-label">tracked spending in August 2026, up 88% since July 2012</span></li>
+      <li><span class="stat-number">24.6%</span><span class="stat-label">of all household spending goes on housing, the biggest slice</span></li>
+      <li><span class="stat-number">64.6%</span><span class="stat-label">of tracked spending goes on wants, little changed from 63.8% in 2013</span></li>
+    </ul>
+  </div>
+</header>
+
+<aside class="guide" aria-labelledby="guide-title">
+  <div class="wrap grid3">
+    <div class="guide-intro">
+      <h2 id="guide-title">Four terms, in plain English</h2>
+      <p class="how-to">Hover over any chart for exact figures. Where a chart can also be clicked, its subtitle says so.</p>
+    </div>
+    <dl class="terms">
+      <div><dt>Seasonally adjusted</dt><dd>Smoothed to remove the usual yearly pattern, such as the December rush, so one month can be compared fairly with another.</dd></div>
+      <div><dt>Current prices</dt><dd>Dollars of the day. Figures include price rises, so part of any increase is things costing more.</dd></div>
+      <div><dt>Tracked spending</dt><dd>What the ABS monthly indicator measures. It leaves out rent, education, communications, electricity and gas.</dd></div>
+      <div><dt>Wants and needs</dt><dd>&ldquo;Wants&rdquo; is our plain word for what the ABS calls discretionary spending, the kind people can more easily cut back on. &ldquo;Needs&rdquo; is the rest.</dd></div>
+    </dl>
+  </div>
+</aside>
+
+<main>
+
+<!-- ============ 1. THE BIG PICTURE ============ -->
+<section class="section" aria-labelledby="s1">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-number">01</span>
+      <h2 id="s1">The big picture</h2>
+      <p class="section-question">How much do Australians spend, and on what?</p>
+    </div>
+
+    <div class="row row--stack">
+      <div class="text">
+        <h3>Chart 1 &middot; Total monthly spending</h3>
+        <p>Spending has climbed from <strong>$43.7 billion a month in July 2012 to $82.3 billion in August 2026</strong>, up 88%.</p>
+        <p>The one sharp break came in 2020: spending fell from $53.9 billion in February to $41.8 billion in April, and was back above its February level by July.</p>
+        <p>These are dollars of the day, so part of the climb is prices rising, not people buying more. Note that the vertical axis starts at $40 billion, not zero.</p>
+      </div>
+      <figure class="chart" id="chart1" role="img" aria-label="Line chart of total monthly household spending in Australia, rising from $43.7 billion in July 2012 to $82.3 billion in August 2026, with a dip in April 2020."></figure>
+    </div>
+
+    <div class="row row--side">
+      <figure class="chart" id="chart2" role="img" aria-label="Radial bar chart of the share of household spending by category in 2025-26. Housing is largest at 24.6 per cent."></figure>
+      <div class="text">
+        <h3>Chart 2 &middot; Where a dollar goes</h3>
+        <p><span class="key" style="--c:#1b42d7">Housing</span> is by far the biggest slice: <strong>24.6%</strong> of the $1,523 billion spent in 2025&ndash;26, well ahead of <span class="key" style="--c:#445c2d">insurance, finance and other</span> (13.8%), <span class="key" style="--c:#1197fd">transport</span> (10.3%) and <span class="key" style="--c:#9014a2">recreation</span> (10.2%).</p>
+        <p>Housing includes an estimated rent for people who own their home: the national accounts treat owners as if they rent it from themselves. Rent, real and estimated, is about 21% of all spending.</p>
+      </div>
+    </div>
+
+    <p class="bridge"><strong>Housing leads.</strong> But has the order always looked like this? Part 2 follows the mix over time.</p>
+  </div>
+</section>
+
+<!-- ============ 2. COMPOSITION OVER TIME ============ -->
+<section class="section" aria-labelledby="s2">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-number">02</span>
+      <h2 id="s2">Composition over time</h2>
+      <p class="section-question">How has the mix of spending changed?</p>
+    </div>
+
+    <div class="row row--stack">
+      <div class="text">
+        <h3>Chart 3 &middot; Rank of each category, 40 years</h3>
+        <p>Housing has ranked first in every year shown, from 1985&ndash;86 to 2025&ndash;26. Beneath it the order has reshuffled.</p>
+        <p><span class="key" style="--c:#7c425f">Education</span> climbed from 12th to 9th, <span class="key" style="--c:#1fa58e">health</span> from 9th to 7th, and <span class="key" style="--c:#445c2d">insurance, finance and other</span> from 4th to 2nd. <span class="key" style="--c:#f28c1e">Food</span> slipped from 3rd to 5th and <span class="key" style="--c:#ae8e5f">clothing</span> from 8th to 10th.</p>
+        <p>Ranks are by dollars spent, not by any one person&rsquo;s budget.</p>
+      </div>
+      <figure class="chart" id="chart3" role="img" aria-label="Bump chart of the rank of 12 spending categories every fifth financial year from 1985-86 to 2025-26. Housing is first throughout; education, health and insurance climb; food and clothing fall."></figure>
+    </div>
+
+    <div class="row row--stack">
+      <div class="text">
+        <h3>Chart 4 &middot; Monthly spending by category</h3>
+        <p>Since 2013, <span class="key" style="--c:#74d8e3">eating out</span> and <span class="key" style="--c:#1fa58e">health</span> spending have each roughly doubled (<strong>+103% and +102%</strong> by 2025), with <span class="key" style="--c:#f28c1e">food</span> up 72% and <span class="key" style="--c:#9014a2">recreation</span> up 71%.</p>
+        <p><span class="key" style="--c:#5f8a1c">Alcohol and tobacco</span> is the odd one out: up only 11%, after peaking at $47.8 billion in 2022 and falling to $35.5 billion in 2025.</p>
+        <p>These figures compare calendar 2013 with 2025, seasonally adjusted, and include price rises.</p>
+      </div>
+      <figure class="chart" id="chart4" role="img" aria-label="Streamgraph of monthly spending in nine categories from 2012 to 2026. Eating out and health roughly double."></figure>
+    </div>
+
+    <div class="row row--stack">
+      <div class="text">
+        <h3>Chart 5 &middot; The 2020 shock, cell by cell</h3>
+        <p>In April 2020, <strong>eating out was 56% below a year earlier and transport 54% below</strong>. A year later they jumped by 99% and 83%, but only because they were compared with the weak months of 2020: in April 2021 eating out was still 13% below April 2019.</p>
+        <p>Since 2023 most cells are pale, so spending has mostly moved a few percentage points from the year before, usually upward.</p>
+        <p>Alcohol and tobacco is the exception: below a year earlier in 41 of the 44 months from January 2023 to August 2026. In August 2026 all nine categories were above a year earlier.</p>
+      </div>
+      <figure class="chart" id="chart5" role="img" aria-label="Heatmap of the yearly change in spending for nine categories each month from January 2019 to August 2026. April 2020 shows large falls; April 2021 shows large rises."></figure>
+    </div>
+
+    <p class="bridge"><strong>The mix moves, and a shock can move it fast.</strong> Part 3 asks whether every state moves together.</p>
+  </div>
+</section>
+
+<!-- ============ 3. ACROSS AUSTRALIA ============ -->
+<section class="section" aria-labelledby="s3">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-number">03</span>
+      <h2 id="s3">Across Australia</h2>
+      <p class="section-question">Does spending look the same in every state?</p>
+    </div>
+
+    <div class="row row--side">
+      <figure class="chart" id="chart6" role="img" aria-label="Map of Australia shading each state by how fast spending grew in the 12 months to August 2026. The Northern Territory and Western Australia grew fastest."></figure>
+      <div class="text">
+        <h3>Chart 6 &middot; How fast spending is growing</h3>
+        <p>The <strong>Northern Territory (+8.2%) and Western Australia (+8.1%)</strong> are growing fastest. The Australian Capital Territory (+4.2%) and Victoria (+4.4%) are growing slowest.</p>
+        <p>Australia overall grew 5.7% in the 12 months to August 2026 compared with the 12 months before. These rates include price rises.</p>
+      </div>
+    </div>
+
+    <div class="row row--side">
+      <figure class="chart" id="chart7" role="img" aria-label="Map of Australia with circles sized by average monthly spending in each state. New South Wales and Victoria are the largest."></figure>
+      <div class="text">
+        <h3>Chart 7 &middot; How much is spent</h3>
+        <p>Size tells a different story. <strong>New South Wales and Victoria make up 56%</strong> of tracked spending, about $44.5 billion of $79.8 billion a month. The Northern Territory makes up about 1%.</p>
+        <p>This map shows how much is spent in total, not how fast it is growing and not spending per person.</p>
+      </div>
+    </div>
+
+    <div class="row row--side">
+      <figure class="chart" id="chart8" role="img" aria-label="Cartogram of the states as circles sized by extra dollars spent in the last 12 months and shaded by growth rate. New South Wales added the most dollars; the Northern Territory grew fastest."></figure>
+      <div class="text">
+        <h3>Chart 8 &middot; Size and speed together</h3>
+        <p>A high growth rate on a small base adds few dollars. <strong>New South Wales added the most, $14.8 billion (+5.1%)</strong>, then Queensland ($12.2 billion) and Victoria ($9.8 billion).</p>
+        <p>The Northern Territory grew fastest but added $0.8 billion, just over 5% of New South Wales&rsquo;s extra dollars. All eight areas together added $51.8 billion.</p>
+      </div>
+    </div>
+
+    <div class="row row--stack">
+      <div class="text">
+        <h3>Chart 9 &middot; How each state splits its spending</h3>
+        <p>Every state spends on the same nine categories, in different proportions. In the <span class="key" style="--c:#111111">Northern Territory</span>, <strong>23.2% of tracked spending goes on eating out</strong> (Australia: 13.8%) and only 6.7% on health (11.7%).</p>
+        <p>In <span class="key" style="--c:#767676">Western Australia</span>, 20.7% goes on transport (17.2%). <span class="key" style="--c:#b0b0b0">Victoria</span> puts more into recreation (18.4%) and health (12.9%) than the national average.</p>
+        <p>These are shares of each area&rsquo;s own spending, not dollars: a bigger share in one category means a smaller share in another.</p>
+      </div>
+      <figure class="chart" id="chart9" role="img" aria-label="Radar chart comparing how the Northern Territory, Western Australia and Victoria split spending across nine categories against the national average."></figure>
+    </div>
+
+    <p class="bridge"><strong>States differ in size, speed and shape.</strong> Part 4 steps back to ask what has shifted for households overall.</p>
+  </div>
+</section>
+
+<!-- ============ 4. SHIFTING PRIORITIES ============ -->
+<section class="section" aria-labelledby="s4">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="section-number">04</span>
+      <h2 id="s4">Shifting priorities</h2>
+      <p class="section-question">What matters more than it did 30 years ago, and what has not changed?</p>
+    </div>
+
+    <div class="row row--stack">
+      <div class="text">
+        <h3>Chart 10 &middot; Spending shares, 1995&ndash;96 and 2025&ndash;26</h3>
+        <p><span class="key" style="--c:#1b42d7">Housing</span> took 20.0% of household spending in 1995&ndash;96 and <strong>24.6% in 2025&ndash;26</strong>, a rise of 4.6 percentage points.</p>
+        <p><span class="key" style="--c:#1fa58e">Health</span> went from 4.8% to 7.4% and <span class="key" style="--c:#7c425f">education</span> from 1.9% to 3.6%. The biggest falls were <span class="key" style="--c:#1197fd">transport</span> (12.6% to 10.3%), <span class="key" style="--c:#53b7f3">furnishings</span> (about 6% to 4%) and <span class="key" style="--c:#f28c1e">food</span> (11.2% to 9.5%).</p>
+        <p>These are shares of dollars, so a category can lose share when its prices rise more slowly than others, even if people buy as much as before. Housing includes an estimated rent for people who own their home.</p>
+      </div>
+      <figure class="chart" id="chart10" role="img" aria-label="Butterfly chart comparing each category's share of household spending in 1995-96 and 2025-26. Housing, health and education rose; transport, furnishings and food fell."></figure>
+    </div>
+
+    <div class="row row--stack">
+      <div class="text">
+        <h3>Chart 11 &middot; The December effect</h3>
+        <p>Spending is not the same every month, and <strong>December stands out</strong>. Compared with an average month, December spending on <span class="key" style="--c:#ae8e5f">clothing</span> is about 41% higher, <span class="key" style="--c:#5f8a1c">alcohol and tobacco</span> 28%, <span class="key" style="--c:#53b7f3">furnishings</span> 21% and <span class="key" style="--c:#9014a2">recreation</span> 14%.</p>
+        <p><span class="key" style="--c:#1fa58e">Health</span> and <span class="key" style="--c:#1197fd">transport</span> are the exceptions, about 5% and 6% below an average month. All tracked spending is about 9% higher.</p>
+        <p>The pattern repeated in 2023, 2024 and 2025. It is exactly what &ldquo;seasonally adjusted&rdquo; figures remove, which is why the other charts do not show it.</p>
+      </div>
+      <figure class="chart" id="chart11" role="img" aria-label="Lollipop chart of how much higher or lower December spending is than an average month, by category. Clothing is about 41 per cent higher; health and transport are lower."></figure>
+    </div>
+
+    <div class="row row--side">
+      <figure class="chart" id="chart12" role="img" aria-label="Two waffle charts of 100 squares showing the share of tracked spending that goes on wants: 63.8 per cent in the 12 months to June 2013 and 64.6 per cent in the 12 months to August 2026."></figure>
+      <div class="text">
+        <h3>Chart 12 &middot; Wants and needs</h3>
+        <p>Of everything the ABS indicator tracks, <strong>63.8% went on wants in the 12 months to June 2013 and 64.6% in the 12 months to August 2026</strong>.</p>
+        <p>In dollars, wants rose from $340 billion to $619 billion (+82%) and needs from $193 billion to $339 billion (+76%). The split barely moved while the total grew 80%. The squares are whole numbers, so the panels show 64 and 65.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ CLOSING ============ -->
+<section class="closing" aria-labelledby="close">
+  <div class="wrap grid3">
+    <h2 id="close">So, where does the money go?</h2>
+    <p><span class="key" style="--c:#1b42d7">Housing</span> takes the biggest slice and has done in every year shown, and its share has grown. <span class="key" style="--c:#1fa58e">Health</span> and <span class="key" style="--c:#7c425f">education</span> are climbing, while <span class="key" style="--c:#f28c1e">food</span>, <span class="key" style="--c:#1197fd">transport</span> and <span class="key" style="--c:#53b7f3">furnishings</span> take a smaller share than 30 years ago.</p>
+    <p>Spending can swing fast, as in April 2020 and every December. And one thing holds steady: about <strong>65 cents of every tracked dollar</strong> go on wants, as they did in 2013.</p>
+  </div>
+</section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="footer-cols grid3">
+      <div>
+        <h2>Data sources</h2>
+        <ul>
+          <li>Australian Bureau of Statistics, <a href="https://www.abs.gov.au/statistics/economy/finance/monthly-household-spending-indicator/latest-release">Monthly Household Spending Indicator</a> (5682.0), August 2026 release. Charts 1, 4, 5, 6, 7, 8, 9, 11, 12.</li>
+          <li>Australian Bureau of Statistics, <a href="https://www.abs.gov.au/statistics/economy/national-accounts/australian-national-accounts-national-income-expenditure-and-product/latest-release">Australian National Accounts: National Income, Expenditure and Product</a> (5206.0), June 2026 release. Charts 2, 3, 10.</li>
+          <li>Australian Bureau of Statistics, <a href="https://www.abs.gov.au/statistics/detailed-methodology-information/information-papers/output-and-methodological-updates-monthly-household-spending-indicator">Output and methodological updates to the Monthly Household Spending Indicator</a>. Defines discretionary (&ldquo;wants&rdquo;) and non-discretionary (&ldquo;needs&rdquo;) spending.</li>
+          <li>State and territory boundaries: Natural Earth, 1:10m admin-1 states and provinces, simplified.</li>
+        </ul>
+      </div>
+      <div>
+        <h2>About this page</h2>
+        <p><strong>Author:</strong> Muhammad Saud, FIT3179 Data Visualisation 2, Monash University<br>
+        <strong>Date:</strong> 8 October 2026</p>
+        <p><strong>AI acknowledgement:</strong> Claude (Anthropic) helped shorten the chart subtitles and assist in HTML and CSS coding in line with the unit&rsquo;s AI-use policy.</p>
+        <p>Typefaces: Fraunces and Source Sans 3 (Google Fonts, SIL Open Font License).</p>
+      </div>
+    </div>
+  </div>
+</footer>
+
 </body>
 </html>

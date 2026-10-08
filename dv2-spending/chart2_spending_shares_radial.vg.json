@@ -78,9 +78,9 @@
               "Education", "Clothing", "Alcohol & tobacco", "Communications"
             ],
             "range": [
-              "#7570b3", "#a6761d", "#1f78b4", "#e7298a",
-              "#d95f02", "#a6cee3", "#1b9e77", "#cab2d6",
-              "#e31a1c", "#e6ab02", "#fb9a99", "#66a61e"
+              "#1b42d7", "#445c2d", "#1197fd", "#9014a2",
+              "#f28c1e", "#74d8e3", "#1fa58e", "#53b7f3",
+              "#7c425f", "#ae8e5f", "#5f8a1c", "#09859d"
             ]
           }
         },

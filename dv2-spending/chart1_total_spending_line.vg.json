@@ -11,7 +11,9 @@
   },
   "config": {
     "font": "Arial, Helvetica, sans-serif",
-    "view": { "stroke": null },
+    "view": {
+      "stroke": null
+    },
     "axis": {
       "labelFontSize": 12,
       "titleFontSize": 12,
@@ -33,90 +35,216 @@
   },
   "data": {
     "url": "data/total_monthly.csv",
-    "format": { "parse": { "date": "date:'%Y-%m-%d'" } }
+    "format": {
+      "parse": {
+        "date": "date:'%Y-%m-%d'"
+      }
+    }
   },
   "transform": [
-    { "calculate": "datum.total_sa_m / 1000", "as": "total_bn" }
+    {
+      "calculate": "datum.total_sa_m / 1000",
+      "as": "total_bn"
+    }
   ],
   "layer": [
     {
       "description": "The line itself",
-      "mark": { "type": "line", "color": "#333333", "strokeWidth": 2.5 },
+      "mark": {
+        "type": "line",
+        "color": "#333333",
+        "strokeWidth": 2.5
+      },
       "encoding": {
         "x": {
           "field": "date",
           "type": "temporal",
           "title": null,
-          "axis": { "format": "%Y", "tickCount": "year", "grid": false }
+          "axis": {
+            "format": "%Y",
+            "tickCount": "year",
+            "grid": false
+          }
         },
         "y": {
           "field": "total_bn",
           "type": "quantitative",
           "title": "Spending per month ($ billion)",
-          "scale": { "domain": [40, 90], "nice": false },
-          "axis": { "values": [40, 50, 60, 70, 80, 90], "format": "d" }
+          "scale": {
+            "domain": [
+              40,
+              90
+            ],
+            "nice": false
+          },
+          "axis": {
+            "values": [
+              40,
+              50,
+              60,
+              70,
+              80,
+              90
+            ],
+            "format": "d"
+          }
         }
       }
     },
     {
       "description": "Invisible points so the tooltip works anywhere along the line",
-      "mark": { "type": "point", "opacity": 0, "size": 200 },
+      "mark": {
+        "type": "point",
+        "opacity": 0,
+        "size": 200
+      },
       "encoding": {
-        "x": { "field": "date", "type": "temporal" },
-        "y": { "field": "total_bn", "type": "quantitative" },
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "total_bn",
+          "type": "quantitative"
+        },
         "tooltip": [
-          { "field": "date", "type": "temporal", "title": "Month", "format": "%b %Y" },
-          { "field": "total_bn", "type": "quantitative", "title": "Spending ($ billion)", "format": ".1f" }
+          {
+            "field": "date",
+            "type": "temporal",
+            "title": "Month",
+            "format": "%b %Y"
+          },
+          {
+            "field": "total_bn",
+            "type": "quantitative",
+            "title": "Spending ($ billion)",
+            "format": ".1f"
+          }
         ]
       }
     },
     {
-      "description": "Dots on the four annotated months",
+      "description": "Dots on the three annotated months",
       "data": {
         "values": [
-          { "date": "2012-07-01", "total_bn": 43.7 },
-          { "date": "2020-02-01", "total_bn": 53.9 },
-          { "date": "2020-04-01", "total_bn": 41.8 },
-          { "date": "2026-08-01", "total_bn": 82.3 }
+          {
+            "date": "2012-07-01",
+            "total_bn": 43.7
+          },
+          {
+            "date": "2020-04-01",
+            "total_bn": 41.8
+          },
+          {
+            "date": "2026-08-01",
+            "total_bn": 82.3
+          }
         ],
-        "format": { "parse": { "date": "date:'%Y-%m-%d'" } }
+        "format": {
+          "parse": {
+            "date": "date:'%Y-%m-%d'"
+          }
+        }
       },
-      "mark": { "type": "point", "filled": true, "color": "#333333", "size": 70 },
+      "mark": {
+        "type": "point",
+        "filled": true,
+        "color": "#333333",
+        "size": 70
+      },
       "encoding": {
-        "x": { "field": "date", "type": "temporal" },
-        "y": { "field": "total_bn", "type": "quantitative" }
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "total_bn",
+          "type": "quantitative"
+        }
       }
     },
     {
       "description": "Annotations that sit to the right of their anchor point",
       "data": {
         "values": [
-          { "date": "2012-07-01", "y_label": 41.9, "text": "Jul 2012: $43.7bn" },
-          { "date": "2020-04-01", "y_label": 41.8, "text": "Apr 2020 low: $41.8bn" }
+          {
+            "date": "2012-07-01",
+            "y_label": 41.9,
+            "text": "Jul 2012: $43.7bn"
+          },
+          {
+            "date": "2020-04-01",
+            "y_label": 42.6,
+            "text": [
+              "COVID-19 lockdowns,",
+              "April 2020"
+            ]
+          }
         ],
-        "format": { "parse": { "date": "date:'%Y-%m-%d'" } }
+        "format": {
+          "parse": {
+            "date": "date:'%Y-%m-%d'"
+          }
+        }
       },
-      "mark": { "type": "text", "align": "left", "baseline": "middle", "dx": 8, "fontSize": 12, "color": "#333333" },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "middle",
+        "dx": 8,
+        "fontSize": 12,
+        "color": "#333333"
+      },
       "encoding": {
-        "x": { "field": "date", "type": "temporal" },
-        "y": { "field": "y_label", "type": "quantitative" },
-        "text": { "field": "text" }
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "y_label",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
       }
     },
     {
       "description": "Annotations that sit to the left of their anchor point",
       "data": {
         "values": [
-          { "date": "2020-02-01", "y_label": 56.5, "text": "Feb 2020: $53.9bn" },
-          { "date": "2026-08-01", "y_label": 86.5, "text": "Aug 2026: $82.3bn (+88% since Jul 2012)" }
+          {
+            "date": "2026-08-01",
+            "y_label": 86.5,
+            "text": "Aug 2026: $82.3bn (+88% since Jul 2012)"
+          }
         ],
-        "format": { "parse": { "date": "date:'%Y-%m-%d'" } }
+        "format": {
+          "parse": {
+            "date": "date:'%Y-%m-%d'"
+          }
+        }
       },
-      "mark": { "type": "text", "align": "right", "baseline": "middle", "dx": -8, "fontSize": 12, "color": "#333333" },
+      "mark": {
+        "type": "text",
+        "align": "right",
+        "baseline": "middle",
+        "dx": -8,
+        "fontSize": 12,
+        "color": "#333333"
+      },
       "encoding": {
-        "x": { "field": "date", "type": "temporal" },
-        "y": { "field": "y_label", "type": "quantitative" },
-        "text": { "field": "text" }
+        "x": {
+          "field": "date",
+          "type": "temporal"
+        },
+        "y": {
+          "field": "y_label",
+          "type": "quantitative"
+        },
+        "text": {
+          "field": "text"
+        }
       }
     }
   ]

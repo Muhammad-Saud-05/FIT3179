@@ -5,7 +5,7 @@
   "padding": { "right": 95 },
   "title": {
     "text": [
-      "Housing and health take a bigger share of spending than 30 years ago,",
+      "Housing and health take a bigger share of spending than 30 years ago;",
       "transport, furnishings and food take a smaller share"
     ],
     "subtitle": [
@@ -46,7 +46,13 @@
     { "calculate": "10 + datum['2026']", "as": "right_end" },
     { "calculate": "format(datum['1996'], '.1f') + '%'", "as": "left_text" },
     { "calculate": "format(datum['2026'], '.1f') + '%'", "as": "right_text" },
-    { "calculate": "(datum.change >= 0 ? '▲ +' : '▼ -') + format(abs(datum.change), '.1f')", "as": "change_text" }
+    { "calculate": "(datum.change >= 0 ? '▲ +' : '▼ -') + format(abs(datum.change), '.1f')", "as": "change_text" },
+    { "calculate": "0", "as": "mid" },
+    { "calculate": "-10", "as": "gap_l" },
+    { "calculate": "10", "as": "gap_r" },
+    { "calculate": "38.5", "as": "chg_x" },
+    { "calculate": "-22", "as": "hl_x" },
+    { "calculate": "22", "as": "hr_x" }
   ],
   "layer": [
     {
@@ -54,7 +60,7 @@
       "mark": { "type": "bar", "size": 20 },
       "encoding": {
         "x": { "field": "left_end", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
-        "x2": { "datum": -10 },
+        "x2": { "field": "gap_l" },
         "y": {
           "field": "category",
           "type": "nominal",
@@ -81,18 +87,18 @@
               "Communications"
             ],
             "range": [
-              "#7570b3",
-              "#a6761d",
-              "#1f78b4",
-              "#e7298a",
-              "#d95f02",
-              "#a6cee3",
-              "#1b9e77",
-              "#cab2d6",
-              "#e31a1c",
-              "#e6ab02",
-              "#fb9a99",
-              "#66a61e"
+              "#1b42d7",
+              "#445c2d",
+              "#1197fd",
+              "#9014a2",
+              "#f28c1e",
+              "#74d8e3",
+              "#1fa58e",
+              "#53b7f3",
+              "#7c425f",
+              "#ae8e5f",
+              "#5f8a1c",
+              "#09859d"
             ]
           },
           "legend": null
@@ -110,7 +116,7 @@
       "mark": { "type": "bar", "size": 20 },
       "encoding": {
         "x": { "field": "right_end", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
-        "x2": { "datum": 10 },
+        "x2": { "field": "gap_r" },
         "y": {
           "field": "category",
           "type": "nominal",
@@ -137,18 +143,18 @@
               "Communications"
             ],
             "range": [
-              "#7570b3",
-              "#a6761d",
-              "#1f78b4",
-              "#e7298a",
-              "#d95f02",
-              "#a6cee3",
-              "#1b9e77",
-              "#cab2d6",
-              "#e31a1c",
-              "#e6ab02",
-              "#fb9a99",
-              "#66a61e"
+              "#1b42d7",
+              "#445c2d",
+              "#1197fd",
+              "#9014a2",
+              "#f28c1e",
+              "#74d8e3",
+              "#1fa58e",
+              "#53b7f3",
+              "#7c425f",
+              "#ae8e5f",
+              "#5f8a1c",
+              "#09859d"
             ]
           },
           "legend": null
@@ -165,7 +171,7 @@
       "description": "Category names in the middle gap",
       "mark": { "type": "text", "align": "center", "baseline": "middle", "fontSize": 12, "color": "#222222" },
       "encoding": {
-        "x": { "datum": 0, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "x": { "field": "mid", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
         "y": {
           "field": "category",
           "type": "nominal",
@@ -210,7 +216,7 @@
       "description": "Change column",
       "mark": { "type": "text", "align": "left", "baseline": "middle", "fontSize": 12, "color": "#222222", "fontWeight": "bold" },
       "encoding": {
-        "x": { "datum": 38.5, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "x": { "field": "chg_x", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
         "y": {
           "field": "category",
           "type": "nominal",
@@ -224,9 +230,17 @@
     {
       "description": "Header over the left bars",
       "transform": [{ "filter": "datum.category == 'Housing & utilities'" }],
-      "mark": { "type": "text", "align": "center", "baseline": "bottom", "fontSize": 13, "color": "#222222", "fontWeight": "bold", "dy": -22 },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "fontSize": 13,
+        "color": "#222222",
+        "fontWeight": "bold",
+        "dy": -22
+      },
       "encoding": {
-        "x": { "datum": -22, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "x": { "field": "hl_x", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
         "y": {
           "field": "category",
           "type": "nominal",
@@ -240,9 +254,17 @@
     {
       "description": "Header over the right bars",
       "transform": [{ "filter": "datum.category == 'Housing & utilities'" }],
-      "mark": { "type": "text", "align": "center", "baseline": "bottom", "fontSize": 13, "color": "#222222", "fontWeight": "bold", "dy": -22 },
+      "mark": {
+        "type": "text",
+        "align": "center",
+        "baseline": "bottom",
+        "fontSize": 13,
+        "color": "#222222",
+        "fontWeight": "bold",
+        "dy": -22
+      },
       "encoding": {
-        "x": { "datum": 22, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "x": { "field": "hr_x", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
         "y": {
           "field": "category",
           "type": "nominal",
@@ -256,9 +278,17 @@
     {
       "description": "Header over the change column",
       "transform": [{ "filter": "datum.category == 'Housing & utilities'" }],
-      "mark": { "type": "text", "align": "left", "baseline": "bottom", "fontSize": 13, "color": "#222222", "fontWeight": "bold", "dy": -22 },
+      "mark": {
+        "type": "text",
+        "align": "left",
+        "baseline": "bottom",
+        "fontSize": 13,
+        "color": "#222222",
+        "fontWeight": "bold",
+        "dy": -22
+      },
       "encoding": {
-        "x": { "datum": 38.5, "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
+        "x": { "field": "chg_x", "type": "quantitative", "scale": { "domain": [-36, 36], "nice": false }, "axis": null },
         "y": {
           "field": "category",
           "type": "nominal",

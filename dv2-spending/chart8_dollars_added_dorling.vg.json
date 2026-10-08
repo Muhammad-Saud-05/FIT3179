@@ -57,7 +57,7 @@
           "scale": {
             "type": "threshold",
             "domain": [5, 6, 7.5],
-            "range": ["#eef3e0", "#becd99", "#869f53", "#5a732a"]
+            "range": ["#eeeeee","#c4c4c4","#8a8a8a","#444444"]
           },
           "legend": { "orient": "top-left", "format": ".1f" }
         },
